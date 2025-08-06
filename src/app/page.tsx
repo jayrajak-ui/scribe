@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="text-center py-20 px-4">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-serif">
           Let's take charting off <br /> your to-do list
         </h1>
         <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">

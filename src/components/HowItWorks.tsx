@@ -26,7 +26,7 @@ export const HowItWorks = () => {
   return (
     <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold font-serif">
           Off the charts simplicity
         </h2>
         <p className="text-lg text-muted-foreground mt-4">

@@ -23,7 +23,7 @@ export const Features = () => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold font-serif">
           Purpose-built AI scribe, not just a side project
         </h2>
         <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">

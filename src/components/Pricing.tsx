@@ -34,7 +34,7 @@ export const Pricing = () => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">Pricing</h2>
+        <h2 className="text-3xl md:text-4xl font-bold font-serif">Pricing</h2>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingTiers.map((tier, idx) => (
