@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from './ui/button'; // Shadcn button
+import { Button } from './ui/button'; // We are back to using the Shadcn button
 
 export const Header = () => {
   return (
@@ -12,20 +12,28 @@ export const Header = () => {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium">
-          <Link href="#" className="text-gray-600 hover:text-black">Features</Link>
-          <Link href="#" className="text-gray-600 hover:text-black">How it Works</Link>
-          <Link href="#" className="text-gray-600 hover:text-black">Specialties</Link>
-          <Link href="#" className="text-gray-600 hover:text-black">Blog</Link>
-          <Link href="#" className="text-gray-600 hover:text-black">Pricing</Link>
-          <Link href="#" className="text-gray-600 hover:text-black">For Groups</Link>
+        <nav className="hidden md:flex gap-6 text-sm font-medium text-neutral-600">
+          <Link href="#" className="hover:text-neutral-900">Features</Link>
+          <Link href="#" className="hover:text-neutral-900">How it Works</Link>
+          <Link href="#" className="hover:text-neutral-900">Specialties</Link>
+          <Link href="#" className="hover:text-neutral-900">Blog</Link>
+          <Link href="#" className="hover:text-neutral-900">Pricing</Link>
+          <Link href="#" className="hover:text-neutral-900">For Groups</Link>
         </nav>
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
-          <Button variant="ghost">Log In</Button>
-          <Button>Try for Free</Button>
-        </div>
+  <Button variant="ghost">Log In</Button>
+  <button
+    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2"
+    style={{
+      backgroundColor: '#6b5ce0',
+      color: '#ffffff'
+    }}
+  >
+    Try for Free
+  </button>
+</div>
       </div>
     </header>
   );

@@ -20,7 +20,15 @@ export default function Home() {
           Purpose-built AI medical scribe delivering note accuracy, effortless workflow, and real-human support. Not all scribes are created equal, explore why Freed is best-in-class.
         </p>
         <div className="mt-8">
-          <Button size="lg">Try for Free</Button>
+          <button
+  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-11 px-8"
+  style={{
+    backgroundColor: '#6b5ce0',
+    color: '#ffffff'
+  }}
+>
+  Try for Free
+</button>
           <p className="text-sm text-muted-foreground mt-2">No credit card needed</p>
         </div>
         

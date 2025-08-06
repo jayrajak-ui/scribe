@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss"
 
+const customColors = require('./src/lib/tailwind-colors.js');
+
 const config = {
-  darkMode: "class", // <-- CORRECTED: This is now a string
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -18,7 +20,9 @@ const config = {
       },
     },
     extend: {
-      // ADD THIS FONTFAMILY BLOCK
+      colors: {
+        ...customColors,
+      },
       fontFamily: {
         sans: ['var(--font-inter)'],
         serif: ['var(--font-playfair)'],
