@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from './ui/button'; // We are back to using the Shadcn button
+import { Button } from '@/components/ui/button'; // We are back to using the Shadcn button
 
 export const Header = () => {
   return (

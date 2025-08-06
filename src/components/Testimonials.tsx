@@ -40,7 +40,7 @@ export const Testimonials = () => {
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-6">"{testimonial.comment}"</p>
+                <p className="text-muted-foreground mb-6">&quot;{testimonial.comment}&quot;</p>
                 <div className="flex items-center gap-4">
                   <Avatar>
                     <AvatarImage src={testimonial.avatar} alt={testimonial.name} />

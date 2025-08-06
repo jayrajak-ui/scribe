@@ -22,7 +22,7 @@ export const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Security</h4>
           <p className="text-sm text-muted-foreground">
-            Our technology is HIPAA-compliant, uses industry best practices, and doesn't store patient recordings.
+            Our technology is HIPAA-compliant, uses industry best practices, and doesn&apos;t store patient recordings.
           </p>
         </div>
 

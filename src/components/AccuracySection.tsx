@@ -1,12 +1,12 @@
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
+
 import { Star, Check } from 'lucide-react';
 
 const checklistItems = [
   "Medical terms and prescription names are correctly transcribed, even the tricky ones.",
-  "All the important info is captured, background conversations aren't.",
-  "Notes are automatically organized into clinical format, so they're EHR-ready."
+  "All the important info is captured, background conversations aren&apos;t.",
+  "Notes are automatically organized into clinical format, so they&apos;re EHR-ready."
 ];
 
 export const AccuracySection = () => {
@@ -27,7 +27,7 @@ export const AccuracySection = () => {
               ))}
             </div>
             <blockquote className="text-xl italic text-muted-foreground">
-              "I love how accurate Freed is. Freed really abstracts that important information that needs to go in your chart note. The medical terminology and medications are spelled correctly, and it truly saves me so much time charting."
+              &quot;I love how accurate Freed is. Freed really abstracts that important information that needs to go in your chart note. The medical terminology and medications are spelled correctly, and it truly saves me so much time charting.&quot;
             </blockquote>
             <p className="mt-4 font-semibold">- Erica Dorn, NP</p>
           </div>

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"; // Import the button
+
 import { ShieldCheck, CircleCheck } from "lucide-react"; // Import icons
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { Testimonials } from "@/components/Testimonials";
@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center py-20 px-4">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-serif">
-          Let's take charting off <br /> your to-do list
+          Let&apos;s take charting off <br /> your to-do list
         </h1>
         <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
           Purpose-built AI medical scribe delivering note accuracy, effortless workflow, and real-human support. Not all scribes are created equal, explore why Freed is best-in-class.
