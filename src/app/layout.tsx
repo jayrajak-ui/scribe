@@ -1,24 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google"; // Import Playfair_Display
+import { Inter, Playfair_Display } from "next/font/google"; // Correctly import both fonts
 import "./globals.css";
 import { Header } from "@/components/Header";
 
-// Configure Inter font for the body text
+// Configure Inter for body text, assign it to the '--font-sans' CSS variable
 const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter', // Set up a CSS variable for Inter
+  variable: '--font-sans',
 });
 
-// Configure Playfair Display font for headings
+// Configure Playfair Display for headings, assign it to the '--font-serif' CSS variable
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-playfair', // Set up a CSS variable for Playfair Display
+  variable: '--font-serif',
 });
 
 export const metadata: Metadata = {
-  title: "Freed Clone", // Let's give it a better title
+  title: "Freed Clone",
   description: "A clone of the Freed website.",
 };
 

@@ -24,8 +24,8 @@ const config = {
         ...customColors,
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        serif: ['var(--font-playfair)'],
+        sans: ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
       },
       keyframes: {
         "accordion-down": {
