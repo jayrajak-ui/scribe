@@ -1,15 +1,7 @@
-import type { NextConfig } from "next"; // <-- 1. Change this line
+import type { NextConfig } from "next";
 
-const repoName = 'my-freed-clone';
-
-const config: NextConfig = { // <-- 2. Change this line
-  output: 'export',
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
-
-  images: {
-    unoptimized: true,
-  },
+const config: NextConfig = {
+  // No special configuration is needed for Vercel
 };
 
 export default config;
