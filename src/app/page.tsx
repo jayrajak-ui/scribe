@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { Testimonials } from "@/components/Testimonials";
@@ -35,11 +36,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column: Image Placeholder */}
+                    {/* Right Column: Image */}
           <div className="hidden md:flex justify-center">
-            <div className="w-full max-w-sm h-auto aspect-square bg-neutral-200 rounded-2xl">
-              {/* This is the gray placeholder box */}
-            </div>
+            <Image
+              src="/images/hero-image.png" // This path points to public/images/hero-image.png
+              alt="AI-Powered Clinical Documentation Platform"
+              width={500}
+              height={500}
+              className="rounded-2xl"
+            />
           </div>
 
         </div>
