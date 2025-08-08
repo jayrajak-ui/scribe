@@ -20,18 +20,18 @@ export default function Home() {
           {/* Left Column: Text Content */}
           <div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight">
-              <span className="text-primary-500">AI-Powered</span> Clinical
+              <span className="text-primary-500">Your AI</span> Assistant
+              <br />
+              for Effortless Clinical
               <br />
               Documentation
-              <br />
-              Platform for Doctors
             </h1>
             <p className="text-lg text-muted-foreground mt-6 max-w-lg">
               Record or upload consultations. Get structured notes,
               prescriptions & clinical summaries instantly.
             </p>
             <div className="mt-8 flex items-center gap-4">
-              <Button variant="outline" size="lg">Book A Demo</Button>
+              <Button variant="outline" size="lg">Log In</Button>
               <Button variant="ghost" size="lg">Try For Free</Button>
             </div>
           </div>
