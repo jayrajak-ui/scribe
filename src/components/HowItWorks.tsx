@@ -1,57 +1,109 @@
-import React from 'react';
-import { Button } from './ui/button';
+// src/components/HowItWorks.tsx
 
+"use client"; // This is crucial! It tells Next.js this is an interactive client component.
+
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from "@/lib/utils"; // We'll use the cn utility for conditional classes
+
+// --- Data for the steps ---
 const steps = [
   {
-    step: 1,
-    title: "Record the consultation",
-    description: "Securely capture any in-person or virtual patient visit.",
-    image: "/step1.png" // We'll use placeholder images
+    title: "Record / Upload Consultation",
+    description: "Use our in-app voice recorder or upload an audio file.",
   },
   {
-    step: 2,
-    title: "Let AI do the work",
+    title: "Scribe AI Transcribes & Understands",
     description: "Eka Scribe instantly processes the recording into structured notes, prescriptions, and summaries.",
-    image: "/step2.png"
   },
   {
-    step: 3,
-    title: "Review & finalize",
+    title: "Instant Notes, Summaries & Prescriptions",
     description: "Quickly check your notes, make edits if needed, and save directly to your EMR.",
-    image: "/step3.png"
-  }
+  },
 ];
 
 export const HowItWorks = () => {
-  return (
-    <section className="bg-slate-50 py-20 px-4">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold font-serif">
-          Simplicity at every step
-        </h2>
-        <p className="text-lg text-muted-foreground mt-4">
-          Works seamlessly on any device
-        </p>
+  // --- State Management ---
+  // We use state to keep track of which step is currently active.
+  const [activeStep, setActiveStep] = useState(0);
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step) => (
-            <div key={step.step} className="flex flex-col items-center">
-              {/* Placeholder for the image */}
-              <div className="w-full h-64 bg-slate-200 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-slate-500">Image for Step {step.step}</span>
-              </div>
-              <h3 className="text-2xl font-semibold">
-                {step.step}. {step.title}
-              </h3>
-              <p className="mt-2 text-muted-foreground">
-                {step.description}
-              </p>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-16">
-          <Button size="lg" variant="outline">Learn More</Button>
+  // --- Effect for Animation ---
+  // This useEffect hook sets up a timer that changes the active step every 3 seconds.
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep((prevStep) => (prevStep + 1) % steps.length);
+    }, 3000); // Change step every 3 seconds (3000 milliseconds)
+
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(interval);
+  }, []); // The empty array [] means this effect runs only once when the component mounts
+
+  return (
+    <section className="bg-black text-white py-20 px-4">
+      <div className="container mx-auto text-center">
+        {/* Main Title */}
+        <h2 className="text-4xl font-bold font-serif mb-2">
+          <span className="text-blue-400">Eka Scribe</span>
+        </h2>
+        <p className="text-xl text-neutral-300">
+          From Voice to Documentation - in 3 simple steps!
+        </p>
+      </div>
+      
+      {/* Main Content Card */}
+      <div className="container mx-auto mt-12 bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+          {/* Left Column: The Steps */}
+          <div className="flex flex-col gap-8">
+            {steps.map((step, index) => {
+              const isActive = index === activeStep;
+              return (
+                <div key={index} className="flex items-start gap-6">
+                  {/* The number and connecting line */}
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={cn(
+                        "flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold transition-all duration-300",
+                        isActive ? "bg-blue-500 text-white" : "bg-neutral-700 text-neutral-400"
+                      )}
+                    >
+                      {index + 1}
+                    </div>
+                    {/* Hide the line for the last item */}
+                    {index < steps.length - 1 && (
+                      <div className="w-0.5 h-16 bg-neutral-700 mt-2"></div>
+                    )}
+                  </div>
+                  
+                  {/* The text content */}
+                  <div className="text-left">
+                    <h3
+                      className={cn(
+                        "text-xl font-semibold transition-colors duration-300",
+                        isActive ? "text-blue-400" : "text-white"
+                      )}
+                    >
+                      {step.title}
+                    </h3>
+                    <p className="text-neutral-400 mt-1">{step.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right Column: The Image */}
+          <div className="hidden md:block">
+            <Image
+              src="/images/how-it-works-phones.png" // Your image file
+              alt="How Eka Scribe works"
+              width={600}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
+
         </div>
       </div>
     </section>
