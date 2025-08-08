@@ -1,5 +1,3 @@
-
-import { ShieldCheck, CircleCheck } from "lucide-react"; // Import icons
 import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { Testimonials } from "@/components/Testimonials";
@@ -9,43 +7,37 @@ import { AccuracySection } from "@/components/AccuracySection";
 import { DataSecurity } from "@/components/DataSecurity";
 import { Pricing } from "@/components/Pricing";
 import  Faq  from "@/components/Faq";
+import { Footer } from "@/components/Footer";
+import { ShieldCheck, CircleCheck } from "lucide-react";
+
 export default function Home() {
   return (
     <main>
-      {/* Hero Section */}
-            {/* New Hero Section */}
-      <section className="container mx-auto py-20 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Column: Text Content */}
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight">
-              <span className="text-primary-500">AI-Powered</span> Clinical
-              <br />
-              Documentation
-              <br />
-              Platform for Doctors
-            </h1>
-            <p className="text-lg text-muted-foreground mt-6 max-w-lg">
-              Record or upload consultations. Get structured notes,
-              prescriptions & clinical summaries instantly.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <Button variant="outline" size="lg">Book A Demo</Button>
-              <Button size="lg" className="btn-primary-custom">Try For Free</Button>
-            </div>
-          </div>
-
-          {/* Right Column: Image Placeholder */}
-          <div className="hidden md:flex justify-center">
-            <div className="w-full max-w-sm h-auto aspect-square bg-neutral-200 rounded-2xl">
-              {/* This is the gray placeholder box */}
-            </div>
-          </div>
-
+      {/* Original Hero Section */}
+      <section className="text-center py-20 px-4">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-serif">
+          Let&apos;s take charting off <br /> your to-do list
+        </h1>
+        <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+          Purpose-built AI medical scribe delivering note accuracy, effortless workflow, and real-human support. Not all scribes are created equal, explore why Freed is best-in-class.
+        </p>
+        <div className="mt-8">
+          <Button size="lg" className="btn-primary-custom">Try for Free</Button>
+          <p className="text-sm text-muted-foreground mt-2">No credit card needed</p>
+        </div>
+        <div className="mt-12 flex justify-center items-center gap-6">
+           <div className="flex items-center gap-2">
+             <ShieldCheck className="h-5 w-5 text-muted-foreground" />
+             <span className="font-semibold">HIPAA Compliant</span>
+           </div>
+           <div className="flex items-center gap-2">
+             <CircleCheck className="h-5 w-5 text-muted-foreground" />
+             <span className="font-semibold">SOC 2</span>
+           </div>
         </div>
       </section>
-      <LogoMarquee /> {/* 2. Add the component here */}
+
+      <LogoMarquee />
       <Testimonials />
       <Features />
       <HowItWorks />
@@ -53,7 +45,7 @@ export default function Home() {
       <DataSecurity />
       <Pricing />
       <Faq />
-
+      <Footer />
     </main>
   );
 }
