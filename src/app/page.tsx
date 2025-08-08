@@ -9,7 +9,6 @@ import { AccuracySection } from "@/components/AccuracySection";
 import { DataSecurity } from "@/components/DataSecurity";
 import { Pricing } from "@/components/Pricing";
 import  Faq  from "@/components/Faq";
-import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <main>
@@ -54,7 +53,6 @@ export default function Home() {
       <DataSecurity />
       <Pricing />
       <Faq />
-      <Footer />
 
     </main>
   );
