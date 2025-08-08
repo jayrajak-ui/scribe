@@ -32,20 +32,23 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white py-20 px-4">
+    // FIX #1: Change main section to a light gray background for contrast with the white card
+    <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto text-center">
-        {/* --- FIX #1: GRADIENT TITLE --- */}
-        <h2 className="text-4xl font-bold font-serif mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold font-serif mb-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           Eka Scribe
         </h2>
-        {/* --- FIX #2: SUBTITLE COLOR --- */}
-        <p className="text-xl text-neutral-200">
+        <p className="text-xl text-neutral-600">
           From Voice to Documentation - in 3 simple steps!
         </p>
       </div>
       
-      {/* --- FIX #3: CARD BACKGROUND --- */}
-      <div className="container mx-auto mt-12 bg-gray-900/50 border border-neutral-700 rounded-3xl p-8 md:p-12">
+      {/* --- FIX #2: MAIN CONTENT CARD --- 
+        - Changed background to white
+        - Made it 'relative' to position the image
+        - Added 'overflow-hidden' to clip the image corners
+      */}
+      <div className="relative overflow-hidden container mx-auto mt-12 bg-white border border-neutral-200 rounded-3xl p-8 md:p-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           <div className="flex flex-col gap-8">
@@ -57,17 +60,16 @@ export const HowItWorks = () => {
                     <div
                       className={cn(
                         "flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold transition-all duration-300",
-                        // --- FIX #4: ACTIVE STATE COLORS ---
-                        isActive ? "bg-primary-500 text-white" : "bg-neutral-800 text-neutral-500 border border-neutral-700"
+                        // --- FIX #3: TEXT COLOR UPDATES ---
+                        isActive ? "bg-primary-500 text-white" : "bg-neutral-100 text-neutral-500 border border-neutral-200"
                       )}
                     >
                       {index + 1}
                     </div>
                     {index < steps.length - 1 && (
-                      // --- FIX #5: CONNECTOR LINE STYLING ---
                       <div className={cn(
                         "w-0.5 h-16 mt-2 transition-colors duration-300",
-                         isActive ? "bg-primary-500" : "bg-neutral-800"
+                         isActive ? "bg-primary-500" : "bg-neutral-200"
                       )}></div>
                     )}
                   </div>
@@ -76,29 +78,35 @@ export const HowItWorks = () => {
                     <h3
                       className={cn(
                         "text-xl font-semibold transition-colors duration-300",
-                        // --- FIX #6: ACTIVE TEXT COLOR ---
-                        isActive ? "text-primary-400" : "text-neutral-400"
+                        isActive ? "text-primary-500" : "text-neutral-800"
                       )}
                     >
                       {step.title}
                     </h3>
-                    <p className="text-neutral-400 mt-1">{step.description}</p>
+                    <p className="text-neutral-500 mt-1">{step.description}</p>
                   </div>
                 </div>
               );
             })}
           </div>
 
-          <div className="hidden md:block">
-            <Image
+          {/* This empty div is a spacer for the mobile layout */}
+          <div className="md:hidden h-48"></div>
+
+        </div>
+        
+        {/* --- FIX #4: ABSOLUTELY POSITIONED IMAGE ---
+          - 'absolute' takes the image out of the normal document flow
+          - 'bottom-0 right-0' pins it to the corner
+          - 'w-1/2' makes it take up half the width of the card
+        */}
+        <div className="absolute bottom-0 right-0 w-full md:w-1/2 h-full hidden md:block">
+           <Image
               src="/images/how-it-works-phones.png"
               alt="How Eka Scribe works"
-              width={600}
-              height={600}
-              className="w-full h-auto"
+              fill
+              className="object-contain object-bottom"
             />
-          </div>
-
         </div>
       </div>
     </section>
