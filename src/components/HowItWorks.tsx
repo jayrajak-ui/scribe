@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 const steps = [
   {
     step: 1,
-    title: "RRecord the consultation",
+    title: "Record the consultation",
     description: "Securely capture any in-person or virtual patient visit.",
     image: "/step1.png" // We'll use placeholder images
   },
