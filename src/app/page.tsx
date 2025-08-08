@@ -13,9 +13,6 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <main>
-      // src/app/page.tsx
-
-      {/* New Hero Section */}
       <section 
         className="py-20 px-4 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/bg-image.png')" }}
@@ -23,7 +20,6 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
-            {/* Left Column: Text Content */}
             <div>
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight text-white">
                 <span className="text-blue-300">AI-Powered</span> Clinical
@@ -42,7 +38,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Image */}
             <div className="hidden md:flex justify-center">
               <Image
                 src="/images/hero-image.png"
@@ -65,7 +60,6 @@ export default function Home() {
       <DataSecurity />
       <Pricing />
       <Faq />
-      <Footer />
     </main>
   );
 }
