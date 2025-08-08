@@ -1,5 +1,6 @@
 
 import { ShieldCheck, CircleCheck } from "lucide-react"; // Import icons
+import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { Testimonials } from "@/components/Testimonials";
 import { Features } from "@/components/Features";
