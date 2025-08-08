@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/LogoMarquee";
-import { Features } from "@/components/Features";
 import { HowItWorks } from "@/components/HowItWorks";
 import { AccuracySection } from "@/components/AccuracySection";
 import { DataSecurity } from "@/components/DataSecurity";
@@ -32,7 +31,7 @@ export default function Home() {
                 prescriptions & clinical summaries instantly.
               </p>
               <div className="mt-8 flex items-center gap-4">
-                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Book A Demo</Button>
+                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Log In</Button>
                 <Button size="lg" className="bg-white text-primary-500 hover:bg-neutral-200">Try For Free</Button>
               </div>
             </div>
@@ -52,7 +51,6 @@ export default function Home() {
       </section>
 
       <LogoMarquee />
-      <Features />
       <HowItWorks />
       <AccuracySection />
       <DataSecurity />
