@@ -89,7 +89,7 @@ export const Footer = () => {
 
         {/* Bottom Copyright Section */}
         <div className="mt-12 pt-8 border-t border-neutral-200 text-center text-sm text-neutral-500">
-          <p>Copyright © 2025 Freed Inc.</p>
+          <p>Copyright © 2025 eka.care</p>
         </div>
       </div>
     </footer>
