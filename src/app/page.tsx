@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <section 
-        className="py-20 px-4 bg-cover bg-center bg-no-repeat"
+        className="py-20 pb-30 px-4 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/bg-image.png')" }}
       >
         <div className="container mx-auto">
