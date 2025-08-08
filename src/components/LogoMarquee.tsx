@@ -25,19 +25,17 @@ export const LogoMarquee = () => {
           {partners.map((partner) => (
             // --- NEW CARD STYLING ---
             // This is the card that contains the logo and name.
-            <div 
+                        <div 
               key={partner.name} 
-              // We've adjusted the card size and padding for a logo-only look
-              className="flex items-center justify-center w-48 h-28 p-6 bg-white rounded-2xl shadow-md mx-4"
+              // We've removed the card styles and now just control the size and spacing
+              className="relative w-40 h-16 mx-8"
             >
-              <div className="relative h-16 w-full">
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                fill
+                className="object-contain"
+              />
             </div>
           ))}
         </Marquee>
