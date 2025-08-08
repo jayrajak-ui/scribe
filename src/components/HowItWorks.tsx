@@ -100,12 +100,12 @@ export const HowItWorks = () => {
           - 'bottom-0 right-0' pins it to the corner
           - 'w-1/2' makes it take up half the width of the card
         */}
-        <div className="absolute bottom-0 right-0 w-full md:w-1/2 h-full hidden md:block">
+        <div className="absolute top-0 bottom-0 right-0 w-full md:w-1/2 hidden md:block">
            <Image
               src="/images/how-it-works-phones.png"
               alt="How Eka Scribe works"
               fill
-              className="object-contain object-bottom"
+              className="object-cover"
             />
         </div>
       </div>
