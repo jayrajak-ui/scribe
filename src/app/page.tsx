@@ -13,35 +13,36 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="text-center py-20 px-4">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-serif">
-          Let&apos;s take charting off <br /> your to-do list
-        </h1>
-        <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-          Purpose-built AI medical scribe delivering note accuracy, effortless workflow, and real-human support. Not all scribes are created equal, explore why Freed is best-in-class.
-        </p>
-        <div className="mt-8">
-          <button
-  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-11 px-8"
-  style={{
-    backgroundColor: '#6b5ce0',
-    color: '#ffffff'
-  }}
->
-  Try for Free
-</button>
-          <p className="text-sm text-muted-foreground mt-2">No credit card needed</p>
-        </div>
-        
-        <div className="mt-12 flex justify-center items-center gap-6">
-           <div className="flex items-center gap-2">
-             <ShieldCheck className="h-5 w-5 text-muted-foreground" />
-             <span className="font-semibold">HIPAA Compliant</span>
-           </div>
-           <div className="flex items-center gap-2">
-             <CircleCheck className="h-5 w-5 text-muted-foreground" />
-             <span className="font-semibold">SOC 2</span>
-           </div>
+            {/* New Hero Section */}
+      <section className="container mx-auto py-20 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Column: Text Content */}
+          <div>
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight">
+              <span className="text-primary-500">AI-Powered</span> Clinical
+              <br />
+              Documentation
+              <br />
+              Platform for Doctors
+            </h1>
+            <p className="text-lg text-muted-foreground mt-6 max-w-lg">
+              Record or upload consultations. Get structured notes,
+              prescriptions & clinical summaries instantly.
+            </p>
+            <div className="mt-8 flex items-center gap-4">
+              <Button variant="outline" size="lg">Book A Demo</Button>
+              <Button size="lg" className="btn-primary-custom">Try For Free</Button>
+            </div>
+          </div>
+
+          {/* Right Column: Image Placeholder */}
+          <div className="hidden md:flex justify-center">
+            <div className="w-full max-w-sm h-auto aspect-square bg-neutral-200 rounded-2xl">
+              {/* This is the gray placeholder box */}
+            </div>
+          </div>
+
         </div>
       </section>
       <LogoMarquee /> {/* 2. Add the component here */}
