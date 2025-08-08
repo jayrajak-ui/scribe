@@ -27,9 +27,9 @@ export const AccuracySection = () => {
               ))}
             </div>
             <blockquote className="text-xl italic text-muted-foreground">
-              &quot;I love how accurate Freed is. Freed really abstracts that important information that needs to go in your chart note. The medical terminology and medications are spelled correctly, and it truly saves me so much time charting.&quot;
+              &quot;With Eka Scribe, I no longer need to type during consultations. The AI instantly converts voice into structured notes, summaries, and prescriptions. It saves me over 12 hours every week, cuts documentation time by 80%, and improves data accuracy — all while integrating seamlessly with my EMR.&quot;
             </blockquote>
-            <p className="mt-4 font-semibold">- Erica Dorn, NP</p>
+            <p className="mt-4 font-semibold">- Dr. Neelesh Kapoor</p>
           </div>
 
           {/* Right Column: Checklist */}

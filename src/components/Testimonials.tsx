@@ -5,19 +5,19 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Heather, MD",
-    role: "Podiatrist",
+    name: "Amit Katre",
+    role: "General Physician",
     avatar: "https://github.com/shadcn.png", // Placeholder image
-    comment: "It's really allowed me to be able to focus on the patient visit, rather than sitting with my back turned to the patient half the time while I'm typing into an EHR and potentially missing things that are pertinent to their appointment."
+    comment: "Eka Scribe really allowed me to be able to focus on the patient visit, rather than sitting with my back turned to the patient half the time while I'm typing into an EHR and potentially missing things that are pertinent to their appointment."
   },
   {
-    name: "Vera, MD",
+    name: "Sanket kulkarni",
     role: "Addictions Physician",
     avatar: "https://github.com/shadcn.png",
-    comment: "Freed gives me peace of mind knowing that every encounter is thoroughly documented to a level that I would never achieve on my own, even if I had lots of time."
+    comment: "Eka Scribe gives me peace of mind knowing that every encounter is thoroughly documented to a level that I would never achieve on my own, even if I had lots of time."
   },
   {
-    name: "Olusesan, MD",
+    name: "Govind Gajera",
     role: "Family Medicine",
     avatar: "https://github.com/shadcn.png",
     comment: "I have more time to spend doing other things I enjoy - getting home early, rather than staying late at the office trying to finish my charts or taking my charts home and doing them over the weekend."
@@ -28,8 +28,7 @@ export const Testimonials = () => {
   return (
     <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold font-serif">Loved by over 20,000 clinicians</h2>
-        <p className="text-muted-foreground mt-2">(and their families)</p>
+        <h2 className="text-3xl font-bold font-serif">Real impact delivered by Eka Scribe</h2>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, idx) => (

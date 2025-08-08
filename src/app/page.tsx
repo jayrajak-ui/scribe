@@ -8,7 +8,6 @@ import { DataSecurity } from "@/components/DataSecurity";
 import { Pricing } from "@/components/Pricing";
 import  Faq  from "@/components/Faq";
 import { Footer } from "@/components/Footer";
-import { ShieldCheck, CircleCheck } from "lucide-react";
 
 export default function Home() {
   return (

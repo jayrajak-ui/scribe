@@ -6,7 +6,7 @@ import { Check } from 'lucide-react';
 const pricingTiers = [
   {
     clinicians: "1 Clinician",
-    price: "$90",
+    price: "₹2000",
     period: "/mo",
     features: ["7-day free trial", "Unlimited note generation"],
     buttonText: "Start Free Trial",
@@ -14,7 +14,7 @@ const pricingTiers = [
   },
   {
     clinicians: "2-9 Clinicians",
-    price: "$84",
+    price: "₹5000",
     period: "/mo",
     features: ["Team template library", "Unlimited note generation"],
     buttonText: "Start Free Trial",

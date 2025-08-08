@@ -7,34 +7,34 @@ import {
 
 const faqs = [
   {
-    question: "Can I cancel at anytime?",
+    question: "What is Eka Scribe?",
     answer:
-      "Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.",
+      "Eka Scribe is an AI-powered medical scribe that records doctor-patient conversations and auto-generates summaries, clinical notes, prescriptions, and structured EMR entries — directly into the Eka.care platform.",
   },
   {
-    question: "My team has credits. How do we use them?",
+    question: "Is Eka Scribe HIPAA-Compliant?",
     answer:
-      "Once your team signs up for a subscription plan. This is where we sit down, grab a cup of coffee and dial in the details.",
+      "Yes. Eka Scribe is built with strict adherence to HIPAA guidelines, ensuring that all patient data remains secure, encrypted, and accessible only to authorized medical professionals. Your conversations and records are stored and processed with the highest level of privacy protection.",
   },
   {
-    question: "How does Acme's pricing work?",
+    question: "Can I Use Eka Scribe During In-Person or Teleconsultations?",
     answer:
-      "Our subscriptions are tiered. Understanding the task at hand and ironing out the wrinkles is key.",
+      "Absolutely. Eka Scribe works seamlessly for both in-clinic consultations and telemedicine sessions. Whether you’re face-to-face with a patient or speaking over a video call, Eka Scribe can capture and document the interaction without disrupting your workflow.",
   },
   {
-    question: "How secure is Acme?",
+    question: "How Much Time Can Eka Scribe Actually Save Me?",
     answer:
-      "Protecting the data you trust to Acme is our first priority. This part is really crucial in keeping the project in line to completion.",
+      "On average, doctors save up to 2 to 3 hours per day by reducing manual note-taking and prescription writing. This means more time for patient care, fewer after-hours documentation sessions, and less administrative fatigue.",
   },
   {
-    question: "How do I get access to a theme I purchased?",
+    question: "Does Eka Scribe Support Multiple Specialties?",
     answer:
-      "If you lose the link for a theme you purchased, don't panic! We've got you covered. You can login to your account, tap your avatar in the upper right corner, and tap Purchases. If you didn't create a login or can't remember the information, you can use our handy Redownload page, just remember to use the same email you originally made your purchases with.",
+      "Yes. Eka Scribe is designed to adapt to various medical specialties, from general practice to cardiology, pediatrics, dermatology, and more — ensuring accurate, specialty-specific notes and prescriptions.",
   },
   {
-    question: "Upgrade License Type",
+    question: "Can Eka Scribe Integrate With My Existing EMR System?",
     answer:
-      "There may be times when you need to upgrade your license from the original type you purchased and we have a solution that ensures you can apply your original purchase cost to the new license purchase.",
+      "Yes. Eka Scribe can integrate not only with the Eka.care platform but also with other EHR and EMR systems. Structured notes, prescriptions, and patient data can be transferred seamlessly, ensuring smooth compatibility with your existing workflow.",
   },
 ];
 
