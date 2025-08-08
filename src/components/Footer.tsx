@@ -1,5 +1,8 @@
+// src/components/Footer.tsx
+
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // <-- FIX #1: Added the missing Image import
 import { Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
 // Data for the link columns
@@ -41,9 +44,16 @@ export const Footer = () => {
           
           {/* Column 1: Logo and Socials */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="text-2xl font-bold">
-              Freed
-            </Link>
+            <Link href="/" className="relative h-10 w-32">
+              <Image
+                src="/black-logo.png" // Using your logo from the public folder
+                alt="Eka Care Logo"
+                fill // <-- FIX #2: Using the modern 'fill' prop
+                className="object-contain" // <-- FIX #2: Modern syntax
+              />
+            </Link> 
+            {/* <-- FIX #3: Removed the extra closing </Link> tag */}
+            <p className="text-sm text-neutral-500">Prioritize Health</p>
             <div className="flex items-center gap-2">
               <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
                 <Instagram className="h-5 w-5" />
