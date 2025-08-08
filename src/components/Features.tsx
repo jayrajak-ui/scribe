@@ -4,18 +4,18 @@ import { Users, Microscope, Zap } from 'lucide-react';
 const features = [
   {
     icon: <Users className="h-10 w-10 text-primary" />,
-    title: "Real humans, real fast",
-    description: "Live, clinician-focused support ensures white-glove service for your team - so you're never alone."
+    title: "Human-centric support",
+    description: "Live, doctor-focused assistance to ensure smooth adoption—so you’re never left figuring things out alone."
   },
   {
     icon: <Microscope className="h-10 w-10 text-primary" />,
-    title: "Clinical-grade accuracy",
-    description: "Purpose-built for any specialty visit, across 14+ languages, with leading-edge AI technology."
+    title: "Clinical-grade precision",
+    description: "Optimized for multiple specialties, across 14+ Indian and global languages, powered by advanced AI to capture every medical detail accurately."
   },
   {
     icon: <Zap className="h-10 w-10 text-primary" />,
-    title: "Best-in-class innovation",
-    description: "Notes that learn from your edits. AI that adapts to your style and an expanding set of AI features to ease your workflow."
+    title: "Continuous innovation",
+    description: "Learns from your workflow, adapts to your style, and keeps adding smarter features to make your practice faster and stress-free."
   }
 ];
 
@@ -24,10 +24,10 @@ export const Features = () => {
     <section className="py-20 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold font-serif">
-          Purpose-built AI scribe, not just a side project
+          Purpose-built AI medical scribe, not just an add-on
         </h2>
         <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-          Generic EHR add-ons treat documentation as an after-thought. Freed is singularly focused on building tools for your charting workflow.
+          Unlike generic tools, Eka Scribe is designed exclusively for doctors—streamlining consultations, documentation, and prescriptions with unmatched efficiency.
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">

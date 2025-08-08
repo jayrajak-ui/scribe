@@ -4,20 +4,20 @@ import { Button } from './ui/button';
 const steps = [
   {
     step: 1,
-    title: "Record a visit",
-    description: "Use Freed to securely record any virtual or in-person visit.",
+    title: "RRecord the consultation",
+    description: "Securely capture any in-person or virtual patient visit.",
     image: "/step1.png" // We'll use placeholder images
   },
   {
     step: 2,
-    title: "Generate your note",
-    description: "Our custom-built AI processes the recording and creates your note.",
+    title: "Let AI do the work",
+    description: "Eka Scribe instantly processes the recording into structured notes, prescriptions, and summaries.",
     image: "/step2.png"
   },
   {
     step: 3,
-    title: "Review and save",
-    description: "Read your note and copy it to your EHR. Just like that, you're done!",
+    title: "Review & finalize",
+    description: "Quickly check your notes, make edits if needed, and save directly to your EMR.",
     image: "/step3.png"
   }
 ];
@@ -27,10 +27,10 @@ export const HowItWorks = () => {
     <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold font-serif">
-          Off the charts simplicity
+          Simplicity at every step
         </h2>
         <p className="text-lg text-muted-foreground mt-4">
-          Works with any device
+          Works seamlessly on any device
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
