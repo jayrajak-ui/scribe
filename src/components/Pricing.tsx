@@ -55,9 +55,9 @@ export const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full mt-auto" variant={tier.variant === 'default' ? 'default' : 'outline'}>
-                  {tier.buttonText}
-                </Button>
+                <Button className="w-full mt-auto" variant="outline">
+              {tier.buttonText}
+            </Button>
               </CardContent>
             </Card>
           ))}

@@ -31,7 +31,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex items-center gap-4">
               <Button variant="outline" size="lg">Book A Demo</Button>
-              <Button size="lg" className="btn-primary-custom">Try For Free</Button>
+              <Button variant="ghost" size="lg">Try For Free</Button>
             </div>
           </div>
 

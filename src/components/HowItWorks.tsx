@@ -51,7 +51,7 @@ export const HowItWorks = () => {
         </div>
         
         <div className="mt-16">
-          <Button size="lg">Learn More</Button>
+          <Button size="lg" variant="outline">Learn More</Button>
         </div>
       </div>
     </section>
