@@ -1,11 +1,8 @@
-// src/components/DataSecurity.tsx
-
 import React from 'react';
 import Image from 'next/image';
 
-// --- Data for the logos ---
 const logos = [
-  { name: 'NHA Approved', image: '/images/nha-logo.png' }, // Change these filenames!
+  { name: 'NHA Approved', image: '/images/nha-logo.png' }, // Change filenames to match yours
   { name: 'FHIR Compliant', image: '/images/fhir-logo.png' },
   { name: 'ABDM Compliant', image: '/images/abdm-logo.png' },
   { name: 'AWS Secured', image: '/images/aws-logo.png' },
@@ -14,22 +11,9 @@ const logos = [
 
 export const DataSecurity = () => {
   return (
-    // The main container needs to be relative to position the background image
-    <section className="relative bg-gradient-to-b from-[#1E1B4B] to-neutral-900 text-white py-20 px-4 overflow-hidden">
-      
-      {/* Background Lock Image */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Image
-          src="/images/lock-background.svg" // Your lock image
-          alt="Secure lock background"
-          width={800}
-          height={800}
-          className="w-auto h-full max-h-[80vh] object-contain opacity-20"
-        />
-      </div>
-
-      {/* Content Container - needs to be relative and have a z-index to sit on top */}
-      <div className="relative z-10 container mx-auto text-center max-w-4xl">
+    // Here we use the dark purple background and white text
+    <section className="bg-primary-700 text-white py-20 px-4">
+      <div className="container mx-auto text-center max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold font-serif">
           Your Health Data, Secured at Every Step
         </h2>
@@ -41,7 +25,7 @@ export const DataSecurity = () => {
         <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 gap-y-6">
           {logos.map((logo) => (
             <div key={logo.name} className="flex flex-col items-center gap-2">
-              <div className="h-12 w-12 relative">
+              <div className="h-12 w-12 relative grayscale invert brightness-0">
                 <Image
                   src={logo.image}
                   alt={logo.name}
