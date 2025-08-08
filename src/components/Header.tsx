@@ -30,9 +30,17 @@ export const Header = () => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
-          <Button variant="ghost">Log In</Button>
-          <Button>Try for Free</Button>
-        </div>
+  <Button variant="ghost">Log In</Button>
+  <button
+    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2"
+    style={{
+      backgroundColor: '#6b5ce0',
+      color: '#ffffff'
+    }}
+  >
+    Try for Free
+  </button>
+</div>
 
       </div>
     </header>
