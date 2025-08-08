@@ -32,7 +32,6 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    // FIX #1: Change main section to a light gray background for contrast with the white card
     <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold font-serif mb-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -43,70 +42,45 @@ export const HowItWorks = () => {
         </p>
       </div>
       
-      {/* --- FIX #2: MAIN CONTENT CARD --- 
-        - Changed background to white
-        - Made it 'relative' to position the image
-        - Added 'overflow-hidden' to clip the image corners
-      */}
-      <div className="relative overflow-hidden container mx-auto mt-12 bg-white border border-neutral-200 rounded-3xl p-8 md:p-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-          <div className="flex flex-col gap-8">
-            {steps.map((step, index) => {
-              const isActive = index === activeStep;
-              return (
-                <div key={index} className="flex items-start gap-6">
-                  <div className="flex flex-col items-center">
-                    <div
-                      className={cn(
-                        "flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold transition-all duration-300",
-                        // --- FIX #3: TEXT COLOR UPDATES ---
-                        isActive ? "bg-primary-500 text-white" : "bg-neutral-100 text-neutral-500 border border-neutral-200"
-                      )}
-                    >
-                      {index + 1}
-                    </div>
-                    {index < steps.length - 1 && (
-                      <div className={cn(
-                        "w-0.5 h-16 mt-2 transition-colors duration-300",
-                         isActive ? "bg-primary-500" : "bg-neutral-200"
-                      )}></div>
-                    )}
-                  </div>
-                  
-                  <div className="text-left">
-                    <h3
-                      className={cn(
-                        "text-xl font-semibold transition-colors duration-300",
-                        isActive ? "text-primary-500" : "text-neutral-800"
-                      )}
-                    >
-                      {step.title}
-                    </h3>
-                    <p className="text-neutral-500 mt-1">{step.description}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* This empty div is a spacer for the mobile layout */}
-          <div className="md:hidden h-48"></div>
-
-        </div>
+      {/* --- NEW LAYERED STRUCTURE --- */}
+      {/* The main card is now a CSS Grid container with 2 columns */}
+      <div className="container relative mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 bg-white border border-neutral-200 rounded-3xl min-h-[500px]">
         
-        {/* --- FIX #4: ABSOLUTELY POSITIONED IMAGE ---
-          - 'absolute' takes the image out of the normal document flow
-          - 'bottom-0 right-0' pins it to the corner
-          - 'w-1/2' makes it take up half the width of the card
-        */}
-        <div className="absolute top-0 bottom-0 right-0 w-full md:w-1/2 hidden md:block">
-           <Image
-              src="/images/how-it-works-phones.png"
-              alt="How Eka Scribe works"
-              fill
-              className="object-cover"
-            />
+        {/* --- LAYER 3: TEXT CONTENT --- */}
+        {/* The text now sits in the first column of the grid and has a z-index to be on top */}
+        <div className="flex flex-col gap-8 p-8 md:p-12 z-10">
+          {steps.map((step, index) => {
+            const isActive = index === activeStep;
+            return (
+              <div key={index} className="flex items-start gap-6">
+                <div className="flex flex-col items-center">
+                  <div className={cn("flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold transition-all duration-300", isActive ? "bg-primary-500 text-white" : "bg-neutral-100 text-neutral-500 border border-neutral-200")}>
+                    {index + 1}
+                  </div>
+                  {index < steps.length - 1 && (
+                    <div className={cn("w-0.5 h-16 mt-2 transition-colors duration-300", isActive ? "bg-primary-500" : "bg-neutral-200")}></div>
+                  )}
+                </div>
+                <div className="text-left">
+                  <h3 className={cn("text-xl font-semibold transition-colors duration-300", isActive ? "text-primary-500" : "text-neutral-800")}>
+                    {step.title}
+                  </h3>
+                  <p className="text-neutral-500 mt-1">{step.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* --- LAYER 2: IMAGE --- */}
+        {/* The image is now in the second column of the grid. On medium screens and up, we use absolute positioning to make it overlap. */}
+        <div className="absolute inset-0 md:relative md:col-start-2">
+          <Image
+            src="/images/how-it-works-phones.png"
+            alt="How Eka Scribe works"
+            fill
+            className="object-contain object-right"
+          />
         </div>
       </div>
     </section>
