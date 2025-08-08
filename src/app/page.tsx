@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/LogoMarquee";
-import { Testimonials } from "@/components/Testimonials";
 import { Features } from "@/components/Features";
 import { HowItWorks } from "@/components/HowItWorks";
 import { AccuracySection } from "@/components/AccuracySection";
@@ -53,7 +52,6 @@ export default function Home() {
       </section>
 
       <LogoMarquee />
-      <Testimonials />
       <Features />
       <HowItWorks />
       <AccuracySection />
