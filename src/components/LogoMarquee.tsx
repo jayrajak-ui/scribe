@@ -27,8 +27,8 @@ export const LogoMarquee = () => {
             // This is the card that contains the logo and name.
                         <div 
               key={partner.name} 
-              // We've removed the card styles and now just control the size and spacing
-              className="relative w-40 h-16 mx-8"
+              // Increased width from w-40 to w-48 and height from h-16 to h-24
+              className="relative w-48 h-24 mx-8"
             >
               <Image
                 src={partner.logo}
