@@ -13,12 +13,11 @@ export const Header = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex gap-6 text-sm font-medium text-neutral-600">
-          <Link href="#" className="hover:text-neutral-900">Features</Link>
-          <Link href="#" className="hover:text-neutral-900">How it Works</Link>
+          <Link href="#" className="hover:text-neutral-900">Product Suite</Link>
+          <Link href="#" className="hover:text-neutral-900">Solutions</Link>
           <Link href="#" className="hover:text-neutral-900">Specialties</Link>
           <Link href="#" className="hover:text-neutral-900">Blog</Link>
           <Link href="#" className="hover:text-neutral-900">Pricing</Link>
-          <Link href="#" className="hover:text-neutral-900">For Groups</Link>
         </nav>
 
         {/* Action Buttons */}

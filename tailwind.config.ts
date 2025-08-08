@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss"
 
+// Import the generated design token colors
 const customColors = require('./src/lib/tailwind-colors.js');
 
 const config = {

@@ -4,7 +4,7 @@ import { ShieldCheck } from 'lucide-react';
 
 export const DataSecurity = () => {
   return (
-    <section className="bg-slate-900 text-white py-20 px-4">
+    <section className="bg-primary-700 text-white py-20 px-4">
       <div className="container mx-auto text-center max-w-4xl">
         <div className="flex justify-center mb-6">
           <ShieldCheck className="h-16 w-16 text-blue-400" />

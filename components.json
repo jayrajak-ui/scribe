@@ -11,12 +11,5 @@
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils"
-  },
-  "registries": [
-    {
-      "name": "magicui",
-      "url": "https://api.magicui.design/registry",
-      "featured": true
-    }
-  ]
+  }
 }
