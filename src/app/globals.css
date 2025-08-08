@@ -131,9 +131,7 @@
 }
 
 @layer base {
-  * {
-    @apply border ring-1 ring-offset-2;
-  }
+  *
   body {
     @apply bg-background text-foreground;
   }
