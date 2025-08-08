@@ -1,8 +1,9 @@
+// src/components/DataSecurity.tsx
 import React from 'react';
 import Image from 'next/image';
 
 const logos = [
-  { name: 'NHA Approved', image: '/images/nha-logo.png' }, // Change filenames to match yours
+  { name: 'NHA Approved', image: '/images/nha-logo.png' },
   { name: 'FHIR Compliant', image: '/images/fhir-logo.png' },
   { name: 'ABDM Compliant', image: '/images/abdm-logo.png' },
   { name: 'AWS Secured', image: '/images/aws-logo.png' },
@@ -11,10 +12,10 @@ const logos = [
 
 export const DataSecurity = () => {
   return (
-    // Here we use the dark purple background and white text
-    <section className="bg-primary-700 text-white py-20 px-4">
+    // FIX: Using a standard dark background color for reliability
+    <section className="bg-slate-900 text-slate-200 py-20 px-4">
       <div className="container mx-auto text-center max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold font-serif">
+        <h2 className="text-4xl md:text-5xl font-bold font-serif text-white">
           Your Health Data, Secured at Every Step
         </h2>
         <p className="text-lg text-slate-300 mt-4">
@@ -29,8 +30,8 @@ export const DataSecurity = () => {
                 <Image
                   src={logo.image}
                   alt={logo.name}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  className="object-contain" // Use modern syntax
                 />
               </div>
               <p className="text-sm text-slate-400">{logo.name}</p>
