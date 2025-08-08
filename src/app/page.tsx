@@ -7,7 +7,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { AccuracySection } from "@/components/AccuracySection";
 import { DataSecurity } from "@/components/DataSecurity";
 import { Pricing } from "@/components/Pricing";
-import { Faq } from "@/components/Faq";
+import  Faq  from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
