@@ -27,7 +27,8 @@ export const LogoMarquee = () => {
             // This is the card that contains the logo and name.
             <div 
               key={partner.name} 
-              className="flex flex-col items-center justify-center gap-4 w-48 h-40 p-4 bg-white rounded-2xl shadow-md mx-4"
+              // We've adjusted the card size and padding for a logo-only look
+              className="flex items-center justify-center w-48 h-28 p-6 bg-white rounded-2xl shadow-md mx-4"
             >
               <div className="relative h-16 w-full">
                 <Image
@@ -37,9 +38,6 @@ export const LogoMarquee = () => {
                   className="object-contain"
                 />
               </div>
-              <p className="text-sm font-semibold text-center text-neutral-700">
-                {partner.name}
-              </p>
             </div>
           ))}
         </Marquee>
