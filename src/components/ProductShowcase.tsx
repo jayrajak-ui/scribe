@@ -1,8 +1,7 @@
 // src/components/ProductShowcase.tsx
 
 import React from 'react';
-import Image from 'next/image';
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card"; // Only need Card, not CardContent
 
 // --- Data for the Product Cards ---
 const productCards = [
@@ -25,7 +24,6 @@ const productCards = [
 
 export const ProductShowcase = () => {
   return (
-    // FIX #1: Changed section background to white
     <section className="bg-white py-20 px-4">
       <div className="container mx-auto">
         
@@ -33,21 +31,17 @@ export const ProductShowcase = () => {
           
           {/* Left Column: Two stacked cards */}
           <div className="grid grid-rows-2 gap-8">
-            <Card className="relative overflow-hidden rounded-2xl bg-white border border-neutral-200 flex flex-col">
-              {/* Dummy Image Area */}
-              <div className="flex-grow bg-neutral-200"></div>
-              {/* FIX #2: Light Blue Footer */}
-              <div className="bg-blue-100 text-neutral-800 p-6">
+            {/* Card 1 */}
+            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none">
+              <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100 text-neutral-800 p-6 rounded-b-2xl">
                 <h4 className="text-lg font-semibold text-neutral-900">{productCards[0].footerTitle}</h4>
                 <p className="text-sm text-neutral-600">{productCards[0].footerDescription}</p>
               </div>
             </Card>
 
-            <Card className="relative overflow-hidden rounded-2xl bg-white border border-neutral-200 flex flex-col">
-              {/* Dummy Image Area */}
-              <div className="flex-grow bg-neutral-200"></div>
-              {/* Light Blue Footer */}
-              <div className="bg-blue-100 text-neutral-800 p-6">
+            {/* Card 2 */}
+            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none">
+              <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100 text-neutral-800 p-6 rounded-b-2xl">
                 <h4 className="text-lg font-semibold text-neutral-900">{productCards[1].footerTitle}</h4>
                 <p className="text-sm text-neutral-600">{productCards[1].footerDescription}</p>
               </div>
@@ -55,11 +49,8 @@ export const ProductShowcase = () => {
           </div>
 
           {/* Right Column: One tall card */}
-          <Card className="relative overflow-hidden rounded-2xl bg-white border border-neutral-200 flex flex-col">
-            {/* Dummy Image Area */}
-            <div className="flex-grow bg-neutral-200"></div>
-            {/* Light Blue Footer */}
-            <div className="bg-blue-100 text-neutral-800 p-6">
+          <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none">
+            <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100 text-neutral-800 p-6 rounded-b-2xl">
               <h4 className="text-lg font-semibold text-neutral-900">{productCards[2].footerTitle}</h4>
               <p className="text-sm text-neutral-600">{productCards[2].footerDescription}</p>
             </div>
