@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/image'; // <-- FIX #1: Added the missing Image import
 import { Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
 // Data for the link columns
@@ -38,8 +38,7 @@ const footerLinks = [
 
 export const Footer = () => {
   return (
-    // FIX #1: Change background to primary blue, text to white
-    <footer className="bg-primary-500 text-white py-12 px-4">
+    <footer className="bg-white text-black py-12 px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
@@ -47,26 +46,25 @@ export const Footer = () => {
           <div className="flex flex-col gap-4">
             <Link href="/" className="relative h-10 w-32">
               <Image
-                // FIX #2: Assuming you have a WHITE version of your logo in /public
-                src="/logo.svg" // Update this if your white logo is named differently (e.g., /white-logo.png)
+                src="/black-logo.png" // Using your logo from the public folder
                 alt="Eka Care Logo"
-                fill
-                className="object-contain"
+                fill // <-- FIX #2: Using the modern 'fill' prop
+                className="object-contain" // <-- FIX #2: Modern syntax
               />
             </Link> 
-            <p className="text-sm text-primary-200">Prioritize Health</p> {/* FIX #3: Lighter text for tagline */}
+            {/* <-- FIX #3: Removed the extra closing </Link> tag */}
+            <p className="text-sm text-neutral-500">Prioritize Health</p>
             <div className="flex items-center gap-2">
-              {/* FIX #4: Social icons background and hover colors */}
-              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800 text-white">
+              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800 text-white">
+              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800 text-white">
+              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800 text-white">
+              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
                 <Youtube className="h-5 w-5" />
               </Link>
             </div>
@@ -75,13 +73,11 @@ export const Footer = () => {
           {/* Columns 2, 3, 4: Links */}
           {footerLinks.map((column) => (
             <div key={column.title}>
-              {/* FIX #5: Headings for link columns */}
-              <h4 className="font-bold mb-4 text-white">{column.title}</h4>
+              <h4 className="font-bold mb-4">{column.title}</h4>
               <ul className="space-y-2">
                 {column.links.map((link) => (
                   <li key={link.text}>
-                    {/* FIX #6: Link text color and hover */}
-                    <Link href={link.href} className="text-primary-200 hover:text-white text-sm">
+                    <Link href={link.href} className="text-neutral-600 hover:text-black text-sm">
                       {link.text}
                     </Link>
                   </li>
@@ -92,8 +88,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Copyright Section */}
-        {/* FIX #7: Copyright section text and border */}
-        <div className="mt-12 pt-8 border-t border-primary-400 text-center text-sm text-primary-200">
+        <div className="mt-12 pt-8 border-t border-neutral-200 text-center text-sm text-neutral-500">
           <p>Copyright © 2025 eka.care</p>
         </div>
       </div>
