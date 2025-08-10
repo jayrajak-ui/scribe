@@ -148,7 +148,3 @@
   color: hsl(var(--primary-foreground)) !important;
 }
 }
-/* Custom style for open accordion item in FAQ */
-.group[data-state='open'] {
-  @apply border-primary-500 ring-2 ring-primary-200;
-}
