@@ -11,7 +11,7 @@ export const Header = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.svg" // This should be the path to your logo in the 'public' folder
+            src="/images/blue-logo.png" // This should be the path to your logo in the 'public' folder
             alt="Freed Logo"
             width={80}  // Adjust width as needed
             height={40} // Adjust height as needed
