@@ -42,7 +42,7 @@ export const ProductShowcase = () => {
                   src={productCards[0].image}
                   alt={productCards[0].footerTitle}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100/80 backdrop-blur-sm text-neutral-800 p-6 rounded-b-2xl">
@@ -58,7 +58,7 @@ export const ProductShowcase = () => {
                   src={productCards[1].image}
                   alt={productCards[1].footerTitle}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100/80 backdrop-blur-sm text-neutral-800 p-6 rounded-b-2xl">
