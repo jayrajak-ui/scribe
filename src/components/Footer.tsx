@@ -2,27 +2,24 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // <-- FIX #1: Added the missing Image import
+import Image from 'next/image';
 import { Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
-// Data for the link columns
+// --- ADJUSTED DATA STRUCTURE for the new layout ---
+// We'll group your existing links into these new categories
 const footerLinks = [
   {
     title: "Products",
     links: [
       { text: "For Doctors", href: "#" },
       { text: "For patients", href: "#" },
-      { text: "GMB For Doctors", href: "#" },
-      { text: "EMR For Neurologist", href: "#" },
     ]
   },
   {
-    title: "Privacy",
+    title: "Specialties",
     links: [
-      { text: "Terms & Conditions", href: "#" },
-      { text: "Privacy policy", href: "#" },
-      { text: "Google API Disclosure", href: "#" },
-      { text: "Security", href: "#" },
+      { text: "EMR for Neurologists", href: "#" },
+      { text: "EMR for Dentists", href: "#" },
     ]
   },
   {
@@ -30,66 +27,79 @@ const footerLinks = [
     links: [
       { text: "Home", href: "#" },
       { text: "Team", href: "#" },
-      { text: "Eka Stories", href: "#" },
       { text: "Careers", href: "#" },
     ]
-  }
+  },
+  {
+    title: "Privacy & Security",
+    links: [
+      { text: "Terms and Conditions", href: "#" },
+      { text: "Privacy Policy", href: "#" },
+      { text: "Security", href: "#" },
+    ]
+  },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="bg-white text-black py-12 px-4">
+    // FIX #1: Use the primary color for the background
+    <footer className="bg-primary-500 text-white py-12 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
-          {/* Column 1: Logo and Socials */}
-          <div className="flex flex-col gap-4">
+        
+        {/* Top Section: Links and Logo */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+
+          {/* FIX #2: Links now take up more space on the left */}
+          <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {footerLinks.map((column) => (
+              <div key={column.title}>
+                <h4 className="font-bold mb-4">{column.title}</h4>
+                <ul className="space-y-2">
+                  {column.links.map((link) => (
+                    <li key={link.text}>
+                      {/* FIX #3: Lighter text color for links */}
+                      <Link href={link.href} className="text-primary-100 hover:text-white text-sm">
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* FIX #4: Logo is now on the right */}
+          <div className="md:col-span-2 flex justify-start md:justify-end">
             <Link href="/" className="relative h-10 w-32">
               <Image
-                src="/black-logo.png" // Using your logo from the public folder
+                src="/logo.svg" // Assuming your white logo is named logo.svg
                 alt="Eka Care Logo"
-                fill // <-- FIX #2: Using the modern 'fill' prop
-                className="object-contain" // <-- FIX #2: Modern syntax
+                fill
+                className="object-contain"
               />
-            </Link> 
-            {/* <-- FIX #3: Removed the extra closing </Link> tag */}
-            <p className="text-sm text-neutral-500">Prioritize Health</p>
-            <div className="flex items-center gap-2">
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom Section: Copyright and Socials */}
+        <div className="mt-12 pt-8 border-t border-primary-400 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-primary-200 order-2 md:order-1 mt-4 md:mt-0">
+            © 2025 Eka.care
+          </p>
+          <div className="flex items-center gap-3 order-1 md:order-2">
+              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 bg-primary-700 rounded-md hover:bg-primary-800">
                 <Youtube className="h-5 w-5" />
               </Link>
             </div>
-          </div>
-
-          {/* Columns 2, 3, 4: Links */}
-          {footerLinks.map((column) => (
-            <div key={column.title}>
-              <h4 className="font-bold mb-4">{column.title}</h4>
-              <ul className="space-y-2">
-                {column.links.map((link) => (
-                  <li key={link.text}>
-                    <Link href={link.href} className="text-neutral-600 hover:text-black text-sm">
-                      {link.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Copyright Section */}
-        <div className="mt-12 pt-8 border-t border-neutral-200 text-center text-sm text-neutral-500">
-          <p>Copyright © 2025 eka.care</p>
         </div>
       </div>
     </footer>
