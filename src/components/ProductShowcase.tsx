@@ -28,7 +28,7 @@ const productCards = [
 
 export const ProductShowcase = () => {
   return (
-    <section className="bg-white py-20 px-4">
+    <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto">
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
