@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ValueProposition } from "@/components/ValueProposition";
+import { ProductShowcase } from "@/components/ProductShowcase";
 import { AccuracySection } from "@/components/AccuracySection";
 import { DataSecurity } from "@/components/DataSecurity";
 import { Pricing } from "@/components/Pricing";
@@ -54,6 +55,7 @@ export default function Home() {
       <LogoMarquee />
       <HowItWorks />
       <ValueProposition />
+      <ProductShowcase />
       <AccuracySection />
       <DataSecurity />
       <Pricing />
