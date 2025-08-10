@@ -5,6 +5,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { ValueProposition } from "@/components/ValueProposition";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { AccuracySection } from "@/components/AccuracySection";
+import { Integrations } from "@/components/Integrations";
 import { DataSecurity } from "@/components/DataSecurity";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
@@ -56,6 +57,7 @@ export default function Home() {
       <ValueProposition />
       <ProductShowcase />
       <AccuracySection />
+      <Integrations />
       <DataSecurity />
       <Faq />
       <Footer />
