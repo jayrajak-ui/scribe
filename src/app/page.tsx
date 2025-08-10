@@ -6,7 +6,6 @@ import { ValueProposition } from "@/components/ValueProposition";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { AccuracySection } from "@/components/AccuracySection";
 import { DataSecurity } from "@/components/DataSecurity";
-import { Pricing } from "@/components/Pricing";
 import  Faq  from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 
@@ -58,7 +57,6 @@ export default function Home() {
       <ProductShowcase />
       <AccuracySection />
       <DataSecurity />
-      <Pricing />
       <Faq />
       <Footer />
     </main>

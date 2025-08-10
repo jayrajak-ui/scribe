@@ -1,50 +1,80 @@
-import React from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// src/components/AccuracySection.tsx
 
-import { Star, Check } from 'lucide-react';
+"use client";
 
-const checklistItems = [
-  "Medical terms and prescription names are correctly transcribed, even the tricky ones.",
-  "All the important info is captured, background conversations aren&apos;t.",
-  "Notes are automatically organized into clinical format, so they&apos;re EHR-ready."
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { MessageSquareQuote } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+// --- Data for the testimonials ---
+const testimonialsData = [
+  {
+    name: "Dr Arvind Kinger",
+    title: "ENT Specialist",
+    image: "/images/dr-arvind-kinger.png", // Make sure you have this image
+    heading: "Dr Arvind boosted his clinic efficiency & patient delight",
+    comment: "Very nice app. It has made things very smooth in my clinic. The patients are also very happy to have the prescription and regular reminders on their mobile.",
+  },
+  {
+    name: "Dr. Neelesh Kapoor",
+    title: "Senior Consultant Physician & Diabetologist, Noida, India",
+    image: "/images/dr-kapoor-photo.png", 
+    heading: "Eka Scribe has completely changed how I document my patient consultations.",
+    comment: "It saves me over 12 hours every week, cuts documentation time by 80%, and improves data accuracy — all while integrating seamlessly with my EMR.",
+  },
 ];
 
 export const AccuracySection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const currentTestimonial = testimonialsData[currentIndex];
+
   return (
-    <section className="py-20 px-4">
+    <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* Left Column: Testimonial */}
-          <div className="flex flex-col items-center text-center">
-            <Avatar className="w-32 h-32 mb-4">
-              <AvatarImage src="https://github.com/shadcn.png" alt="Erica Dorn, NP" />
-              <AvatarFallback>ED</AvatarFallback>
-            </Avatar>
-            <div className="flex mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+          <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0">
+             <Image 
+                src={currentTestimonial.image}
+                alt={currentTestimonial.name} 
+                fill
+                className="rounded-2xl object-cover bg-slate-200"
+              />
+          </div>
+
+          <div className="flex flex-col gap-6 text-left">
+            <div className="p-3 bg-blue-100 rounded-full w-fit">
+              <MessageSquareQuote className="w-6 h-6 text-primary-500" />
+            </div>
+            
+            <h3 className="text-3xl font-bold font-serif leading-tight text-neutral-800">
+              {currentTestimonial.heading}
+            </h3>
+
+            <p className="text-neutral-500 text-lg leading-relaxed">
+              &quot;{currentTestimonial.comment}&quot;
+            </p>
+
+            <div className="mt-4">
+              <p className="font-bold text-lg text-neutral-900">{currentTestimonial.name}</p>
+              <p className="text-sm text-neutral-500">{currentTestimonial.title}</p>
+            </div>
+            
+            <div className="flex gap-2 mt-4">
+              {testimonialsData.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={cn(
+                    "h-2 rounded-full transition-all duration-300",
+                    currentIndex === index ? "w-12 bg-primary-500" : "w-6 bg-neutral-300"
+                  )}
+                />
               ))}
             </div>
-            <blockquote className="text-xl italic text-muted-foreground">
-              &quot;With Eka Scribe, I no longer need to type during consultations. The AI instantly converts voice into structured notes, summaries, and prescriptions. It saves me over 12 hours every week, cuts documentation time by 80%, and improves data accuracy — all while integrating seamlessly with my EMR.&quot;
-            </blockquote>
-            <p className="mt-4 font-semibold">- Dr. Neelesh Kapoor</p>
           </div>
-
-          {/* Right Column: Checklist */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Built for, and with, clinicians like you</h2>
-            <ul className="space-y-4">
-              {checklistItems.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <Check className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
         </div>
       </div>
     </section>
