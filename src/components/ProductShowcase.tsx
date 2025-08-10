@@ -1,7 +1,7 @@
 // src/components/ProductShowcase.tsx
 
 import React from 'react';
-import { Card } from "@/components/ui/card"; // Only need Card, not CardContent
+import { Card } from "@/components/ui/card"; // Only need Card
 
 // --- Data for the Product Cards ---
 const productCards = [
@@ -30,9 +30,9 @@ export const ProductShowcase = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Left Column: Two stacked cards */}
-          <div className="grid grid-rows-2 gap-8">
+          <div className="flex flex-col gap-8">
             {/* Card 1 */}
-            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none">
+            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[250px]">
               <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100 text-neutral-800 p-6 rounded-b-2xl">
                 <h4 className="text-lg font-semibold text-neutral-900">{productCards[0].footerTitle}</h4>
                 <p className="text-sm text-neutral-600">{productCards[0].footerDescription}</p>
@@ -40,7 +40,7 @@ export const ProductShowcase = () => {
             </Card>
 
             {/* Card 2 */}
-            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none">
+            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[250px]">
               <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100 text-neutral-800 p-6 rounded-b-2xl">
                 <h4 className="text-lg font-semibold text-neutral-900">{productCards[1].footerTitle}</h4>
                 <p className="text-sm text-neutral-600">{productCards[1].footerDescription}</p>
@@ -49,7 +49,7 @@ export const ProductShowcase = () => {
           </div>
 
           {/* Right Column: One tall card */}
-          <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none">
+          <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[532px]">
             <div className="absolute bottom-0 left-0 right-0 z-10 bg-blue-100 text-neutral-800 p-6 rounded-b-2xl">
               <h4 className="text-lg font-semibold text-neutral-900">{productCards[2].footerTitle}</h4>
               <p className="text-sm text-neutral-600">{productCards[2].footerDescription}</p>
