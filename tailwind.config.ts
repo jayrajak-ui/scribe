@@ -18,17 +18,6 @@ const config = {
       },
     },
     extend: {
-      // THIS IS THE CRITICAL FIX
-      colors: {
-        primary: {
-          '100': '#E9EFFF', // A very light blue
-          '200': '#D3DFFF', // A light blue
-          '400': '#7A9FFF', // A mid-tone blue
-          '500': '#215FFF', // Your main primary blue
-          '700': '#1A4CCC', // A darker blue for hovers
-          '800': '#143999', // A very dark blue
-        }
-      },
       fontFamily: {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
