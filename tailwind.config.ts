@@ -1,8 +1,5 @@
 import type { Config } from "tailwindcss"
 
-// Import the generated design token colors
-const customColors = require('./src/lib/tailwind-colors.js');
-
 const config = {
   darkMode: "class",
   content: [
@@ -21,22 +18,24 @@ const config = {
       },
     },
     extend: {
+      // THIS IS THE CRITICAL FIX
       colors: {
-        ...customColors,
+        primary: {
+          '100': '#E9EFFF', // A very light blue
+          '200': '#D3DFFF', // A light blue
+          '400': '#7A9FFF', // A mid-tone blue
+          '500': '#215FFF', // Your main primary blue
+          '700': '#1A4CCC', // A darker blue for hovers
+          '800': '#143999', // A very dark blue
+        }
       },
       fontFamily: {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
