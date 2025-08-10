@@ -9,8 +9,8 @@ export const ValueProposition = () => {
         <h1 className="text-4xl md:text-5xl font-serif font-semibold text-black">
           Save over{" "}
           <span className="text-[#215FFF]">12 hours a week</span>{" "}
-          with Eka Scribe — cutting documentation time by up to{" "}
-          <span className="text-[#215FFF]">80%</span>
+          with Eka Scribe — cutting documentation time by{" "}
+          <span className="text-[#215FFF]">up to 80%</span>
         </h1>
       </div>
     </section>
