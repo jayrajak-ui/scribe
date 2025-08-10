@@ -36,7 +36,7 @@ export const ProductShowcase = () => {
           {/* Left Column: Two stacked cards */}
           <div className="flex flex-col gap-8">
             {/* Card 1 */}
-            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[250px] flex flex-col">
+            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[350px] flex flex-col">
               <div className="relative flex-grow">
                 <Image
                   src={productCards[0].image}
@@ -52,7 +52,7 @@ export const ProductShowcase = () => {
             </Card>
 
             {/* Card 2 */}
-            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[250px] flex flex-col">
+            <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[350px] flex flex-col">
               <div className="relative flex-grow">
                 <Image
                   src={productCards[1].image}
@@ -69,7 +69,7 @@ export const ProductShowcase = () => {
           </div>
 
           {/* Right Column: One tall card */}
-          <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[532px] flex flex-col">
+          <Card className="relative overflow-hidden rounded-2xl bg-neutral-200 p-0 border-none min-h-[732px] flex flex-col">
             <div className="relative flex-grow">
               <Image
                 src={productCards[2].image}
