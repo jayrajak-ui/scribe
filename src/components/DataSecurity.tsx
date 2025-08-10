@@ -13,21 +13,21 @@ const logos = [
 
 export const DataSecurity = () => {
   return (
-    // FIX #1: Make the section 'relative' to position the background image inside it
-    <section className="relative bg-primary-700 text-white py-32 px-4 overflow-hidden">
-      
-      {/* FIX #2: Add the background lock image */}
+    // --- THIS IS THE FIX ---
+    <section 
+      className="relative text-white py-32 px-4 overflow-hidden"
+      style={{ backgroundColor: '#1A4CCC' }} // Applying the color directly
+    >
       <div className="absolute inset-0 flex items-center justify-center">
         <Image
-          src="/images/lock.png" // Path to your lock image
+          src="/images/lock.png"
           alt="Secure lock background icon"
-          width={800} // Use a large width/height for quality
+          width={800}
           height={800}
-          className="w-auto h-full max-h-[80vh] object-contain opacity-10" // Opacity makes it subtle
+          className="w-auto h-full max-h-[80vh] object-contain opacity-10"
         />
       </div>
 
-      {/* FIX #3: Add 'relative z-10' to the content to ensure it sits ON TOP of the image */}
       <div className="relative z-10 container mx-auto text-center max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold font-serif">
           Your Health Data, Secured at Every Step
