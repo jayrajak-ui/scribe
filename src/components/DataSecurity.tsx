@@ -13,7 +13,7 @@ const logos = [
 export const DataSecurity = () => {
   return (
     // FIX: Using a standard dark background color for reliability
-    <section className="bg-slate-900 text-slate-200 py-20 px-4">
+    <section className="bg-slate-900 text-slate-200 py-32 px-4">
       <div className="container mx-auto text-center max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold font-serif text-white">
           Your Health Data, Secured at Every Step
@@ -26,7 +26,7 @@ export const DataSecurity = () => {
         <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 gap-y-6">
           {logos.map((logo) => (
             <div key={logo.name} className="flex flex-col items-center gap-2">
-              <div className="h-12 w-12 relative grayscale invert brightness-0">
+              <div className="h-20 w-20 relative grayscale invert brightness-0">
                 <Image
                   src={logo.image}
                   alt={logo.name}
