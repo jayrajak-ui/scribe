@@ -5,14 +5,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
-// --- ADJUSTED DATA STRUCTURE for the new layout ---
-// We'll group your existing links into these new categories
-const footerLinks = [
+// Adjusted data structure
+const footerColumns = [
   {
     title: "Products",
     links: [
       { text: "For Doctors", href: "#" },
-      { text: "For patients", href: "#" },
+      { text: "For Patients", href: "#" },
+      { text: "GMB For Doctors", href: "#" },
     ]
   },
   {
@@ -20,6 +20,7 @@ const footerLinks = [
     links: [
       { text: "EMR for Neurologists", href: "#" },
       { text: "EMR for Dentists", href: "#" },
+      { text: "EMR for Pediatricians", href: "#" },
     ]
   },
   {
@@ -42,22 +43,21 @@ const footerLinks = [
 
 export const Footer = () => {
   return (
-    // FIX #1: Use the primary color for the background
+    // Main footer container with blue background
     <footer className="bg-primary-500 text-white py-12 px-4">
       <div className="container mx-auto">
         
         {/* Top Section: Links and Logo */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+        <div className="flex flex-col md:flex-row justify-between gap-8">
 
-          {/* FIX #2: Links now take up more space on the left */}
-          <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {footerLinks.map((column) => (
+          {/* Links Container */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            {footerColumns.map((column) => (
               <div key={column.title}>
                 <h4 className="font-bold mb-4">{column.title}</h4>
                 <ul className="space-y-2">
                   {column.links.map((link) => (
                     <li key={link.text}>
-                      {/* FIX #3: Lighter text color for links */}
                       <Link href={link.href} className="text-primary-100 hover:text-white text-sm">
                         {link.text}
                       </Link>
@@ -68,11 +68,11 @@ export const Footer = () => {
             ))}
           </div>
 
-          {/* FIX #4: Logo is now on the right */}
-          <div className="md:col-span-2 flex justify-start md:justify-end">
-            <Link href="/" className="relative h-10 w-32">
+          {/* Logo Container */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="relative block h-10 w-32">
               <Image
-                src="/logo.svg" // Assuming your white logo is named logo.svg
+                src="/logo.svg" // Make sure you have a white logo named logo.svg in your /public folder
                 alt="Eka Care Logo"
                 fill
                 className="object-contain"
@@ -82,8 +82,8 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Section: Copyright and Socials */}
-        <div className="mt-12 pt-8 border-t border-primary-400 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-primary-200 order-2 md:order-1 mt-4 md:mt-0">
+        <div className="mt-12 pt-8 border-t border-primary-400 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-primary-200 order-2 md:order-1">
             © 2025 Eka.care
           </p>
           <div className="flex items-center gap-3 order-1 md:order-2">
