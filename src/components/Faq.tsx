@@ -45,7 +45,7 @@ export const Faq = () => {
 
           {/* Left Column: Title */}
           <div className="lg:col-span-1">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-neutral-800 leading-tight">
+            <h2 className="text-4xl font-bold font-serif text-neutral-800 leading-tight">
               Frequently Asked Questions
             </h2>
             <p className="mt-4 text-neutral-500">

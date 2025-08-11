@@ -29,7 +29,7 @@ export const DataSecurity = () => {
       </div>
 
       <div className="relative z-10 container mx-auto text-center max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold font-serif">
+        <h2 className="text-4xl font-bold font-serif">
           Your Health Data, Secured at Every Step
         </h2>
         <p className="text-lg text-slate-300 mt-4">

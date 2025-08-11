@@ -21,7 +21,7 @@ export const Integrations = () => {
       <div className="container mx-auto">
         {/* Text Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+          <h2 className="text-4xl font-bold font-serif text-neutral-900">
             Seamless Integration With Your Workflow
           </h2>
           <p className="mt-4 text-2xl font-semibold text-primary-500">
