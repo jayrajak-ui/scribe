@@ -38,7 +38,7 @@ export const HowItWorks = () => {
         <h2 className="text-4xl font-bold font-serif text-neutral-900">
           Eka Scribe
         </h2>
-        <p className="text-xl text-neutral-600">
+        <p className="text-lg text-neutral-600">
           From Voice to Documentation - in 3 simple steps!
         </p>
       </div>
