@@ -66,7 +66,7 @@ export const Footer = () => {
           <div className="flex flex-col items-start md:items-end gap-4">
             <Link href="/" className="relative h-10 w-32">
               <Image
-                src="/white-logo.png"
+                src="/images/white-logo.png"
                 alt="Eka Care Logo"
                 fill
                 className="object-contain"
