@@ -54,8 +54,8 @@ export default function Home() {
               <Image
                 src="/images/hero-image.png"
                 alt="AI-Powered Clinical Documentation Platform"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 className="rounded-2xl"
               />
             </div>
