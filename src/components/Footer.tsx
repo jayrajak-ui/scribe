@@ -41,7 +41,7 @@ export const Footer = () => {
       className="text-white py-12 px-4" 
       style={{ backgroundColor: '#215FFF' }}
     >
-      <div className="container mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Columns 1, 2, 3: Links */}
