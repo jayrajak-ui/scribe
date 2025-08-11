@@ -23,11 +23,11 @@ export default function Home() {
             
             <div>
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight text-white">
-                <span className="text-blue-300">AI-Powered</span> Clinical
+                <span/>Your AI Assistant
+                <br />
+                for Afforless Clinical
                 <br />
                 Documentation
-                <br />
-                Platform for Doctors
               </h1>
               <p className="text-lg text-blue-100 mt-6 max-w-lg">
                 Record or upload consultations. Get structured notes,
