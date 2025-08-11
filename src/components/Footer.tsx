@@ -73,16 +73,16 @@ export const Footer = () => {
               />
             </Link>
             <div className="flex items-center gap-2">
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 rounded-md footer-social-icon">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 rounded-md footer-social-icon">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 rounded-md footer-social-icon">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
+              <Link href="#" className="p-2 rounded-md footer-social-icon">
                 <Youtube className="h-5 w-5" />
               </Link>
             </div>

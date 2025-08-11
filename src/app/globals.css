@@ -148,3 +148,12 @@
   color: hsl(var(--primary-foreground)) !important;
 }
 }
+/* Custom style for footer social media icons */
+.footer-social-icon {
+  background-color: hsl(var(--primary-foreground) / 0.1) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+.footer-social-icon:hover {
+  background-color: hsl(var(--primary-foreground) / 0.2) !important;
+}
