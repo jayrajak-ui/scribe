@@ -25,7 +25,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight text-white">
                 <span/>Your AI Assistant
                 <br />
-                for Affortless Clinical
+                for Effortless Clinical
                 <br />
                 Documentation
               </h1>
