@@ -35,7 +35,7 @@ export const HowItWorks = () => {
     // FIX #1: Change main section to a light gray background for contrast with the white card
     <section className="bg-slate-50 py-20 px-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold font-serif mb-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold font-serif text-neutral-900">
           Eka Scribe
         </h2>
         <p className="text-xl text-neutral-600">
