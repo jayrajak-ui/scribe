@@ -157,3 +157,17 @@
 .footer-social-icon:hover {
   background-color: hsl(var(--primary-foreground) / 0.2) !important;
 }
+/* Custom styles for the active step in HowItWorks */
+.how-it-works-active-step .step-number {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-color: transparent !important;
+}
+
+.how-it-works-active-step .step-line {
+  background-color: hsl(var(--primary)) !important;
+}
+
+.how-it-works-active-step .step-title {
+  color: hsl(var(--primary)) !important;
+}
