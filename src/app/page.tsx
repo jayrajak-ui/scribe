@@ -34,8 +34,8 @@ export default function Home() {
                 prescriptions & clinical summaries instantly.
               </p>
               <div className="mt-8 flex items-center gap-4">
-                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Log In</Button>
-                <Button size="lg" className="bg-white text-primary-500 hover:bg-neutral-200">Try For Free</Button>
+                <Button variant="outline" size="xlg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Log In</Button>
+                <Button size="xlg" className="bg-white text-primary-500 hover:bg-neutral-200">Try For Free</Button>
               </div>
               {/* --- THIS IS THE NEW BADGES SECTION --- */}
               <div className="mt-8 flex justify-start items-center gap-6">
