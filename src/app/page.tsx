@@ -25,7 +25,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-serif leading-tight text-white">
                 <span/>Your AI Assistant
                 <br />
-                for Afforless Clinical
+                for Affortless Clinical
                 <br />
                 Documentation
               </h1>
@@ -34,8 +34,8 @@ export default function Home() {
                 prescriptions & clinical summaries instantly.
               </p>
               <div className="mt-8 flex items-center gap-4">
-                <Button variant="outline" size="sm" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Log In</Button>
-                <Button size="sm" className="bg-white text-primary-500 hover:bg-neutral-200">Try For Free</Button>
+                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Log In</Button>
+                <Button size="lg" className="bg-white text-primary-500 hover:bg-neutral-200">Try For Free</Button>
               </div>
               {/* --- THIS IS THE NEW BADGES SECTION --- */}
               <div className="mt-8 flex justify-start items-center gap-6">
