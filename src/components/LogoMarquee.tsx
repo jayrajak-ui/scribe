@@ -19,7 +19,7 @@ const partners = [
 export const LogoMarquee = () => {
   return (
     // The section now has a light gray background
-    <section className="bg-slate-50 py-12">
+    <section className="bg-slate-50 pt-12">
       <div className="container mx-auto">
         <Marquee pauseOnHover className="[--duration:60s]">
           {partners.map((partner) => (

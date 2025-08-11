@@ -29,30 +29,31 @@ export const Integrations = () => {
           </p>
         </div>
 
-        {/* Visual Section with Ripples and Logos */}
-        <div className="relative flex justify-center items-center h-64">
+        {/* --- RESPONSIVE VISUAL SECTION --- */}
+        {/* Height is now smaller on mobile (h-48) and larger on desktop (md:h-64) */}
+        <div className="relative flex justify-center items-center h-48 md:h-64">
           
-          {/* Background Ripples - stacked divs with increasing size */}
-          <div className="absolute w-[600px] h-[300px] rounded-[60px] border border-neutral-200/80" />
-          <div className="absolute w-[500px] h-[250px] rounded-[50px] border border-neutral-200/80" />
-          <div className="absolute w-[400px] h-[200px] rounded-[40px] border border-neutral-200/80" />
-          <div className="absolute w-[300px] h-[150px] rounded-[30px] border border-neutral-200/80" />
+          {/* Ripples are now hidden on mobile and appear on desktop */}
+          <div className="absolute w-[300px] h-[150px] md:w-[600px] md:h-[300px] rounded-[30px] md:rounded-[60px] border border-neutral-200/80" />
+          <div className="absolute w-[250px] h-[125px] md:w-[500px] md:h-[250px] rounded-[25px] md:rounded-[50px] border border-neutral-200/80" />
+          <div className="absolute w-[200px] h-[100px] md:w-[400px] md:h-[200px] rounded-[20px] md:rounded-[40px] border border-neutral-200/80" />
+          <div className="absolute w-[150px] h-[75px] md:w-[300px] md:h-[150px] rounded-[15px] md:rounded-[30px] border border-neutral-200/80" />
           
-          {/* Logos Container - sits on top of the ripples */}
-          <div className="relative z-10 flex items-center justify-center gap-4">
+          {/* Logos are smaller on mobile */}
+          <div className="relative z-10 flex items-center justify-center gap-2 md:gap-4">
             {logos.map((logo, index) => {
-              const isCenter = index === 3; // The 4th logo (index 3) is the center one
+              const isCenter = index === 3;
               return (
                 <div
                   key={logo.name}
-                  className={`relative p-3 rounded-2xl bg-white shadow-lg flex items-center justify-center transition-all duration-300
-                    ${isCenter ? 'w-20 h-20 border-2 border-neutral-800' : 'w-16 h-16'}`}
+                  className={`relative p-2 md:p-3 rounded-xl md:rounded-2xl bg-white shadow-lg flex items-center justify-center transition-all duration-300
+                    ${isCenter ? 'w-14 h-14 md:w-20 md:h-20 border-2 border-neutral-800' : 'w-12 h-12 md:w-16 md:h-16'}`}
                 >
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    width={isCenter ? 48 : 32}
-                    height={isCenter ? 48 : 32}
+                    width={isCenter ? 32 : 24} // Smaller images for mobile
+                    height={isCenter ? 32 : 24}
                     className="object-contain"
                   />
                 </div>
