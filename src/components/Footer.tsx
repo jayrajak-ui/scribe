@@ -39,18 +39,36 @@ export const Footer = () => {
   return (
     <footer className="bg-white text-black py-12 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
-          <div className="flex flex-col gap-4">
+          {/* Columns 1, 2, 3: Links */}
+          <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {footerLinks.map((column) => (
+              <div key={column.title}>
+                <h4 className="font-bold mb-4">{column.title}</h4>
+                <ul className="space-y-2">
+                  {column.links.map((link) => (
+                    <li key={link.text}>
+                      <Link href={link.href} className="text-neutral-600 hover:text-black text-sm">
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Column 4: Logo and Socials */}
+          <div className="flex flex-col items-start md:items-end gap-4">
             <Link href="/" className="relative h-10 w-32">
               <Image
-                src="/black-logo.png" // Using your original black logo
+                src="/black-logo.png"
                 alt="Eka Care Logo"
                 fill
                 className="object-contain"
               />
-            </Link> 
-            <p className="text-sm text-neutral-500">Prioritize Health</p>
+            </Link>
             <div className="flex items-center gap-2">
               <Link href="#" className="p-2 bg-neutral-200 rounded-md hover:bg-neutral-300">
                 <Instagram className="h-5 w-5" />
@@ -66,23 +84,9 @@ export const Footer = () => {
               </Link>
             </div>
           </div>
-
-          {footerLinks.map((column) => (
-            <div key={column.title}>
-              <h4 className="font-bold mb-4">{column.title}</h4>
-              <ul className="space-y-2">
-                {column.links.map((link) => (
-                  <li key={link.text}>
-                    <Link href={link.href} className="text-neutral-600 hover:text-black text-sm">
-                      {link.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
 
+        {/* Bottom Copyright Section */}
         <div className="mt-12 pt-8 border-t border-neutral-200 text-center text-sm text-neutral-500">
           <p>Copyright © 2025 eka.care</p>
         </div>
