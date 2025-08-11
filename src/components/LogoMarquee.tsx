@@ -19,7 +19,7 @@ const partners = [
 export const LogoMarquee = () => {
   return (
     // The section now has a light gray background
-    <section className="bg-slate-50 py-20">
+    <section className="bg-slate-50 py-12">
       <div className="container mx-auto">
         <Marquee pauseOnHover className="[--duration:60s]">
           {partners.map((partner) => (
@@ -28,7 +28,7 @@ export const LogoMarquee = () => {
                         <div 
               key={partner.name} 
               // Increased width from w-40 to w-48 and height from h-16 to h-24
-              className="relative w-48 h-24 mx-8"
+              className="relative w-56 h-28 mx-8"
             >
               <Image
                 src={partner.logo}
