@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
+import { ShieldCheck, CircleCheck } from "lucide-react";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ValueProposition } from "@/components/ValueProposition";
@@ -35,6 +36,17 @@ export default function Home() {
               <div className="mt-8 flex items-center gap-4">
                 <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">Log In</Button>
                 <Button size="lg" className="bg-white text-primary-500 hover:bg-neutral-200">Try For Free</Button>
+              </div>
+              {/* --- THIS IS THE NEW BADGES SECTION --- */}
+              <div className="mt-8 flex justify-start items-center gap-6">
+                <div className="flex items-center gap-2 text-blue-100">
+                  <ShieldCheck className="h-5 w-5" />
+                  <span className="font-semibold text-sm">HIPAA Compliant</span>
+                </div>
+                <div className="flex items-center gap-2 text-blue-100">
+                  <CircleCheck className="h-5 w-5" />
+                  <span className="font-semibold text-sm">SOC 2</span>
+                </div>
               </div>
             </div>
 
