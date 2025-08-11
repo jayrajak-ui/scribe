@@ -14,7 +14,7 @@ const testimonialsData = [
     title: "ENT Specialist",
     image: "/images/dr-kapoor-photo.png", // Make sure you have this image
     heading: "Dr Arvind boosted his clinic efficiency & patient delight",
-    comment: "Very nice app. It has made things very smooth in my clinic. The patients are also very happy to have the prescription and regular reminders on their mobile.",
+    comment: "With Eka Scribe, I no longer need to type during consultations. The AI instantly converts voice into structured notes and summaries.",
   },
   {
     name: "Dr. Neelesh Kapoor",
