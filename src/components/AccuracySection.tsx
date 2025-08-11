@@ -32,7 +32,7 @@ export const AccuracySection = () => {
 
   return (
     <section className="bg-slate-50 py-20 px-4">
-      <div className="container mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0">
