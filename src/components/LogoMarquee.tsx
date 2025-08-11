@@ -20,6 +20,15 @@ export const LogoMarquee = () => {
   return (
     // The section now has a light gray background
     <section className="bg-slate-50 pt-12">
+      {/* --- THIS IS THE NEW TITLE SECTION --- */}
+      <div className="container mx-auto text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold font-serif text-neutral-800">
+          Trusted by Clinics and Hospitals Across India
+        </h2>
+      </div>
+
+      {/* The Marquee is now outside the container to be full-width, if desired */}
+      {/* For this version, I'll keep it inside the container as per your original code */}
       <div className="container mx-auto">
         <Marquee pauseOnHover className="[--duration:60s]">
           {partners.map((partner) => (
