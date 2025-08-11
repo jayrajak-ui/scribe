@@ -1,18 +1,34 @@
 // src/components/Header.tsx
 
-"use client"; // This component is now interactive, so we need this directive
+"use client";
 
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Import Sheet components
-import { Menu } from 'lucide-react'; // Import the Menu (hamburger) icon
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from 'lucide-react';
+import { useScroll } from "@/lib/hooks/use-scroll"; // 1. Import the hook
+import { cn } from "@/lib/utils"; // 2. Import the cn utility
 
 export const Header = () => {
+  // 3. Use the hook in your component
+  const scrolled = useScroll(50);
+
   return (
-    <header className="p-4 border-b">
-      <div className="container mx-auto flex justify-between items-center">
+    // 4. Replace the old header tag with this new one
+    <header 
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300",
+        scrolled
+          ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+          // When the hero has a dark/colored background, make the header transparent
+          // If your hero has a white background, you might change this to "bg-white"
+          : "bg-white/0"
+      )}
+    >
+      {/* 5. Add a fixed height to the container for better layout stability */}
+      <div className="container mx-auto flex h-16 justify-between items-center">
         
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -36,16 +52,9 @@ export const Header = () => {
 
         {/* --- DESKTOP BUTTONS (Hidden on mobile) --- */}
         <div className="hidden md:flex items-center gap-2">
+          {/* Using a standard Shadcn button for consistency */}
           <Button variant="ghost">Log In</Button>
-          <button
-            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2"
-            style={{
-              backgroundColor: '#215FFF',
-              color: '#ffffff'
-            }}
-          >
-            Try for Free
-          </button>
+          <Button>Try for Free</Button>
         </div>
 
         {/* --- MOBILE MENU (Visible ONLY on mobile) --- */}
@@ -66,15 +75,7 @@ export const Header = () => {
                 <Link href="#" className="font-semibold py-2">Pricing</Link>
                 <div className="border-t pt-4 grid gap-4">
                   <Button variant="ghost" className="w-full">Log In</Button>
-                  <button
-                    className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2"
-                    style={{
-                      backgroundColor: '#215FFF',
-                      color: '#ffffff'
-                    }}
-                  >
-                    Try for Free
-                  </button>
+                  <Button className="w-full">Try for Free</Button>
                 </div>
               </div>
             </SheetContent>
