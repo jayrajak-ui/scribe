@@ -39,7 +39,7 @@ export const DataSecurity = () => {
         <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 gap-y-6">
           {logos.map((logo) => (
             <div key={logo.name} className="flex flex-col items-center gap-2">
-              <div className="h-16 w-16 relative grayscale invert brightness-0">
+              <div className="h-20 w-20 relative grayscale invert brightness-0">
                 <Image
                   src={logo.image}
                   alt={logo.name}
@@ -47,7 +47,6 @@ export const DataSecurity = () => {
                   className="object-contain"
                 />
               </div>
-              <p className="text-sm text-slate-400">{logo.name}</p>
             </div>
           ))}
         </div>
