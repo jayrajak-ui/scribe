@@ -46,7 +46,7 @@ export const Integrations = () => {
                 <div
                   key={logo.name}
                   className={`relative p-3 rounded-2xl bg-white shadow-lg flex items-center justify-center transition-all duration-300
-                    ${isCenter ? 'w-20 h-20 border-2 border-primary-500' : 'w-16 h-16'}`}
+                    ${isCenter ? 'w-20 h-20 border-2 border-neutral-800' : 'w-16 h-16'}`}
                 >
                   <Image
                     src={logo.src}

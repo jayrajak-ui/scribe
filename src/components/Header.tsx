@@ -13,8 +13,8 @@ export const Header = () => {
           <Image
             src="/images/blue-logo.png" // This should be the path to your logo in the 'public' folder
             alt="eka Logo"
-            width={80}  // Adjust width as needed
-            height={40} // Adjust height as needed
+            width={120}  // Adjust width as needed
+            height={60} // Adjust height as needed
             priority     // Add this to load the logo faster
           />
         </Link>
