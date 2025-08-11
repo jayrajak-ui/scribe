@@ -158,21 +158,25 @@
   background-color: hsl(var(--primary-foreground) / 0.2) !important;
 }
 /* Custom styles for the active step in HowItWorks */
-.how-it-works-active-step .step-number {
+/* Custom styles for the HowItWorks component steps */
+
+/* Default (inactive) state for all step titles */
+.step-item .step-title {
+  color: #4b5563 !important; /* A standard dark gray (text-gray-600) */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Active state styles */
+.step-item.how-it-works-active-step .step-number {
   background-color: hsl(var(--primary)) !important;
   color: hsl(var(--primary-foreground)) !important;
   border-color: transparent !important;
 }
 
-.how-it-works-active-step .step-line {
+.step-item.how-it-works-active-step .step-line {
   background-color: hsl(var(--primary)) !important;
 }
 
-.how-it-works-active-step .step-title {
+.step-item.how-it-works-active-step .step-title {
   color: hsl(var(--primary)) !important;
-}
-/* Custom style for the title of an INACTIVE step */
-.step-title {
-  color: #374151 !important; /* A standard dark gray (text-gray-700) */
-  transition: color 0.3s ease-in-out;
 }

@@ -39,21 +39,18 @@ export const HowItWorks = () => {
           {steps.map((step, index) => {
             const isActive = index === activeStep;
             return (
-              // --- FIX #1: Added conditional 'how-it-works-active-step' class ---
-              <div key={index} className={cn("flex items-start gap-6", isActive && "how-it-works-active-step")}>
+              // --- FIX: Added 'step-item' class for targeting ---
+              <div key={index} className={cn("step-item flex items-start gap-6", isActive && "how-it-works-active-step")}>
                 <div className="flex flex-col items-center">
-                  {/* --- FIX #2: Added 'step-number' class --- */}
                   <div className="step-number flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold transition-all duration-300 bg-neutral-100 text-neutral-500 border border-neutral-200">
                     {index + 1}
                   </div>
                   {index < steps.length - 1 && (
-                    // --- FIX #3: Added 'step-line' class ---
                     <div className="step-line w-0.5 h-16 mt-2 transition-colors duration-300 bg-neutral-200"></div>
                   )}
                 </div>
                 <div className="text-left">
-                  {/* --- FIX #4: Added 'step-title' class --- */}
-                  <h3 className="step-title text-xl font-bold transition-colors duration-300 text-neutral-900">
+                  <h3 className="step-title text-xl font-bold">
                     {step.title}
                   </h3>
                   <p className="text-neutral-500 mt-1">{step.description}</p>
