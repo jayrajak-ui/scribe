@@ -52,7 +52,7 @@ export const Footer = () => {
                 <ul className="space-y-2">
                   {column.links.map((link) => (
                     <li key={link.text}>
-                      <Link href={link.href} className="text-neutral-600 hover:text-black text-sm">
+                      <Link href={link.href} className="text-white/80 hover:text-white text-sm">
                         {link.text}
                       </Link>
                     </li>
@@ -66,7 +66,7 @@ export const Footer = () => {
           <div className="flex flex-col items-start md:items-end gap-4">
             <Link href="/" className="relative h-10 w-32">
               <Image
-                src="/black-logo.png"
+                src="/white-logo.png"
                 alt="Eka Care Logo"
                 fill
                 className="object-contain"
@@ -90,7 +90,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Copyright Section */}
-        <div className="mt-12 pt-8 border-t border-neutral-200 text-center text-sm text-neutral-500">
+        <div className="mt-12 pt-8 border-t border-white/20 text-center text-sm text-white/80">
           <p>Copyright © 2025 eka.care</p>
         </div>
       </div>
