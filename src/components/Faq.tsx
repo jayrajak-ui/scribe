@@ -48,7 +48,7 @@ export const Faq = () => {
             <h2 className="text-4xl font-bold font-serif text-neutral-800 leading-tight">
               Frequently Asked Questions
             </h2>
-            <p className="mt-4 text-neutral-500">
+            <p className="text-lg mt-4 text-neutral-500">
               Find Answers to Your Most Common Questions Here
             </p>
           </div>
