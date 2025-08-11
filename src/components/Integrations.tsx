@@ -24,7 +24,7 @@ export const Integrations = () => {
           <h2 className="text-4xl font-bold font-serif text-neutral-900">
             Seamless Integration With Your Workflow
           </h2>
-          <p className="text-lg mt-4 font-semibold text-primary-500">
+          <p className="text-lg mt-4 font-regular text-primary-500">
             Eka Scribe Is Compatible With Your Clinic&apos;s Tools & Platforms
           </p>
         </div>
