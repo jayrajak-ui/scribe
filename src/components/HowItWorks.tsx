@@ -48,7 +48,7 @@ export const HowItWorks = () => {
         - Made it 'relative' to position the image
         - Added 'overflow-hidden' to clip the image corners
       */}
-      <div className="relative overflow-hidden container mx-auto mt-12 bg-white border border-neutral-200 rounded-3xl p-8 md:p-12">
+      <div className="relative overflow-hidden max-w-5xl mx-auto mt-12 bg-white border border-neutral-200 rounded-3xl p-8 md:p-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           <div className="flex flex-col gap-8">
