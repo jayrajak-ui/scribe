@@ -64,12 +64,12 @@ export default function Home() {
         </div>
       </section>
 
-      <LogoMarquee />
       <HowItWorks />
       <ValueProposition />
       <ProductShowcase />
       <AccuracySection />
       <Integrations />
+      <LogoMarquee />
       <DataSecurity />
       <Faq />
       <Footer />
