@@ -35,12 +35,17 @@ export const Header = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex gap-6 text-sm font-medium text-neutral-600">
-          <Link href="#" className="hover:text-neutral-900">Product Suite</Link>
-          <Link href="#" className="hover:text-neutral-900">Solutions</Link>
-          <Link href="#" className="hover:text-neutral-900">Specialties</Link>
-          <Link href="#" className="hover:text-neutral-900">Blog</Link>
-          <Link href="#" className="hover:text-neutral-900">Pricing</Link>
+                <nav 
+          className={cn(
+            "hidden md:flex gap-6 text-sm font-medium transition-colors",
+            scrolled ? "text-neutral-600" : "text-white"
+          )}
+        >
+          <Link href="#" className="hover:text-primary-500">Product Suite</Link>
+          <Link href="#" className="hover:text-primary-500">Solutions</Link>
+          <Link href="#" className="hover:text-primary-500">Specialties</Link>
+          <Link href="#" className="hover:text-primary-500">Blog</Link>
+          <Link href="#" className="hover:text-primary-500">Pricing</Link>
         </nav>
 
         {/* --- DESKTOP BUTTONS --- */}
