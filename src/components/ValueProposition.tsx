@@ -4,7 +4,7 @@ import React from 'react';
 
 export const ValueProposition = () => {
   return (
-    <section className="bg-white py-20 px-4">
+    <section className="bg-white py-16 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-serif font-semibold text-neutral-700">
           Reclaim{" "}

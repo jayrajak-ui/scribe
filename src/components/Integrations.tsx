@@ -17,7 +17,7 @@ const logos = [
 
 export const Integrations = () => {
   return (
-    <section className="bg-white py-12 px-4">
+    <section className="bg-white py-16 px-4">
       <div className="container mx-auto">
         {/* Text Section */}
         <div className="text-center mb-16">

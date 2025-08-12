@@ -15,7 +15,7 @@ export const DataSecurity = () => {
   return (
     // --- THIS IS THE FIX ---
     <section 
-      className="relative text-white py-20 px-4 overflow-hidden"
+      className="relative text-white py-16 px-4 overflow-hidden"
       style={{ backgroundColor: '#1A4CCC' }} // Applying the color directly
     >
       <div className="absolute inset-0 flex items-center justify-center">

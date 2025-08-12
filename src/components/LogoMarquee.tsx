@@ -19,7 +19,7 @@ const partners = [
 export const LogoMarquee = () => {
   return (
     // The section now has a light gray background
-    <section className="bg-slate-50 py-12">
+    <section className="bg-slate-50 py-16">
       {/* --- THIS IS THE NEW TITLE SECTION --- */}
       <div className="container mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold font-serif text-neutral-700">

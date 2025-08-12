@@ -23,7 +23,7 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section className="bg-slate-50 py-20 px-4">
+    <section className="bg-slate-50 py-16 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold font-serif mb-2 text-neutral-700">
           Eka Scribe

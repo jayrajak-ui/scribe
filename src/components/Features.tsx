@@ -21,7 +21,7 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-16 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold font-serif">
           Purpose-built AI medical scribe, not just an add-on
