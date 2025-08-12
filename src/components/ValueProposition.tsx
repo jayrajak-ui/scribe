@@ -6,7 +6,7 @@ export const ValueProposition = () => {
   return (
     <section className="bg-white py-20 px-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-serif leading-tight text-neutral-700">
+        <h2 className="text-4xl md:text-5xl font-serif font-semibold text-neutral-700">
           Reclaim{" "}
           <span className="text-[#215FFF]">12+ Hours</span>{" "}
           Every Week — Eka Scribe Cuts Your Documentation Time by{" "}
