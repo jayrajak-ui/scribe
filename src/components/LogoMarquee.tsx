@@ -22,7 +22,7 @@ export const LogoMarquee = () => {
     <section className="bg-slate-50 py-12">
       {/* --- THIS IS THE NEW TITLE SECTION --- */}
       <div className="container mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold font-serif text-neutral-800">
+        <h2 className="text-3xl md:text-4xl font-bold font-serif text-neutral-700">
           Trusted by Clinics and Hospitals Across India
         </h2>
       </div>

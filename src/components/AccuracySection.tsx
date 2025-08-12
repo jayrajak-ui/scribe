@@ -49,7 +49,7 @@ export const AccuracySection = () => {
               <MessageSquareQuote className="w-6 h-6 text-primary-500" />
             </div>
             
-            <h3 className="text-3xl font-bold font-serif leading-tight text-neutral-800">
+            <h3 className="text-3xl font-bold font-serif leading-tight text-neutral-700">
               {currentTestimonial.heading}
             </h3>
 
