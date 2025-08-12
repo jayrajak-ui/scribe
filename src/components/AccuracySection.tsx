@@ -31,7 +31,7 @@ export const AccuracySection = () => {
   const currentTestimonial = testimonialsData[currentIndex];
 
   return (
-    <section className="bg-slate-50 py-20 px-4">
+    <section className="bg-slate-50 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
