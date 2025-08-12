@@ -14,9 +14,11 @@ const steps = [
 
 export const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0); // 1. Add this new state
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setAnimationKey(prevKey => prevKey + 1); // 2. Add this line to update the key
       setActiveStep((prevStep) => (prevStep + 1) % steps.length);
     }, 3000); 
     return () => clearInterval(interval);
@@ -39,15 +41,24 @@ export const HowItWorks = () => {
           {steps.map((step, index) => {
             const isActive = index === activeStep;
             return (
-              // --- FIX: Added 'step-item' class for targeting ---
               <div key={index} className={cn("step-item flex items-start gap-6", isActive && "how-it-works-active-step")}>
                 <div className="flex flex-col items-center">
                   <div className="step-number flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold transition-all duration-300 bg-neutral-100 text-neutral-500 border border-neutral-200">
                     {index + 1}
                   </div>
+                  
+                  {/* --- 3. THIS IS THE MODIFIED BLOCK --- */}
                   {index < steps.length - 1 && (
-                    <div className="step-line w-0.5 h-16 mt-2 transition-colors duration-300 bg-neutral-200"></div>
+                    // The gray line is now a relative container
+                    <div className="relative step-line w-0.5 h-16 mt-2 transition-colors duration-300 bg-neutral-200">
+                      {/* The new blue line sits on top and animates */}
+                      <div 
+                        key={animationKey} // The key forces a reset on each step change
+                        className="step-progress-line absolute top-0 w-full bg-primary-500"
+                      />
+                    </div>
                   )}
+
                 </div>
                 <div className="text-left">
                   <h3 className="step-title text-xl font-bold">
