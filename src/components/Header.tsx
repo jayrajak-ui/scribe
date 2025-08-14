@@ -12,15 +12,14 @@ import { useScroll } from "@/lib/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 
 export const Header = () => {
-  const scrolled = useScroll(50);
+    const { scrolled, direction } = useScroll();
 
   return (
-    <header 
+        <header 
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled
-          ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-          : "bg-white/0"
+        scrolled && "border-b border-gray-200 bg-white/50 backdrop-blur-xl",
+        scrolled && direction === 'down' ? "-translate-y-full" : "translate-y-0"
       )}
     >
       <div className="container mx-auto flex h-16 justify-between items-center">

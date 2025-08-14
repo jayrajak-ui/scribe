@@ -143,10 +143,7 @@
   30%, 60% {
     background-position: calc(100% + var(--shimmer-width)) 0;
   }
-  .btn-primary-custom {
-  background-color: hsl(var(--primary)) !important;
-  color: hsl(var(--primary-foreground)) !important;
-}
+  
 }
 /* Custom style for footer social media icons */
 .footer-social-icon {
@@ -180,12 +177,11 @@
 .step-item.how-it-works-active-step .step-title {
   color: hsl(var(--primary)) !important;
 }
-/* Custom class for the animated progress line */
-.step-progress-line {
-  height: 0%;
-  transition: height 3s linear; /* Duration should match the step change interval */
+/* Hide the default cursor to show the custom one */
+* {
+  cursor: none !important;
 }
-
-.step-item.how-it-works-active-step .step-progress-line {
-  height: 100% !important;
+/* Custom style for the scroll progress bar */
+.scroll-progress-bar {
+  background-color: #215FFF !important; /* Your primary blue hex code */
 }

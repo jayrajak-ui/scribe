@@ -1,4 +1,6 @@
 // src/app/layout.tsx
+import { ScrollProgressBar } from "@/components/magicui/ScrollProgressBar";
+import { SmoothCursor } from "@/components/magicui/smooth-cursor";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
@@ -25,10 +27,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+    return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body>
-        {/* 2. Wrap the children with the SmoothScroll component */}
+      {/* Apply the cursor-none class to the one and only body tag */}
+      <body className="cursor-none">
+        <ScrollProgressBar /> 
+        <SmoothCursor />
         <SmoothScroll>
           <Header />
           {children}

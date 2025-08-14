@@ -1,24 +1,33 @@
 // src/lib/hooks/use-scroll.ts
-
 "use client";
 
 import { useState, useEffect } from "react";
 
-export function useScroll(threshold = 10) {
-  const [scrolled, setScrolled] = useState(false);
+export function useScroll() {
+  const [scrollData, setScrollData] = useState({
+    y: 0,
+    lastY: 0,
+    scrolled: false,
+    direction: "up" as "up" | "down",
+  });
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > threshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrollData((prevState) => {
+        const currentY = window.scrollY;
+        const direction = currentY > prevState.lastY ? "down" : "up";
+        return {
+          y: currentY,
+          lastY: prevState.y,
+          scrolled: currentY > 10,
+          direction: direction,
+        };
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [threshold]);
+  }, []);
 
-  return scrolled;
+  return scrollData;
 }
